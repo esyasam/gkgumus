@@ -206,7 +206,8 @@ function writeDocumentToFirestore(collection, documentId, data) {
   "oauthScopes": [
     "https://www.googleapis.com/auth/spreadsheets.currentonly",
     "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/datastore"
+    "https://www.googleapis.com/auth/datastore",
+    "https://www.googleapis.com/auth/script.external_request"
   ]
 }
  * 

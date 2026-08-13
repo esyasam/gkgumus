@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gümüş Kozmetik</title>
+  
+  <!-- Premium Fonts (Outfit and Playfair Display for Elegance) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+  <!-- Premium Page Loader -->
+  <div id="page-loader" class="page-loader">
+    <div class="loader-content">
+      <div class="spinner"></div>
+      <h2 class="loader-title">Gümüş Kozmetik</h2>
+      <p class="loader-subtitle">Yükleniyor...</p>
+    </div>
+  </div>
+
+  <!-- Announcement Bar (Dynamic) -->
+  <div id="announcement-bar" class="announcement-bar hidden">
+    <span id="announcement-text">Doğal güzelliğin formülü Gümüş Kozmetik ile kapınızda!</span>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header id="main-header" class="header">
+    <div class="container header-container">
+      <a href="#" class="logo">
+        <span class="logo-accent">GK</span>
+        <span id="header-brand-name" class="logo-text">Gümüş Kozmetik</span>
+      </a>
+      
+      <!-- Desktop Menu -->
+      <nav class="nav-desktop">
+        <a href="#" class="nav-link active">Ana Sayfa</a>
+        <a href="#urunler" class="nav-link">Ürünlerimiz</a>
+        <a href="#hakkimizda" class="nav-link">Hakkımızda</a>
+        <a href="#faaliyetlerimiz" class="nav-link">Faaliyetlerimiz</a>
+        <a href="#iletisim" class="nav-link">İletişim</a>
+      </nav>
+
+      <!-- CTA & Mobile Toggle -->
+      <div class="header-actions">
+        <a id="header-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp hide-mobile">
+          <i data-lucide="phone"></i>
+          <span>Destek Hattı</span>
+        </a>
+        <button id="menu-toggle" class="btn-icon menu-toggle" aria-label="Menüyü Aç">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <div class="drawer-header">
+      <div class="logo">
+        <span class="logo-accent">GK</span>
+        <span id="drawer-brand-name" class="logo-text">Gümüş Kozmetik</span>
+      </div>
+      <button id="menu-close" class="btn-icon" aria-label="Menüyü Kapat">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#" class="drawer-link active">Ana Sayfa</a>
+      <a href="#urunler" class="drawer-link">Ürünlerimiz</a>
+      <a href="#hakkimizda" class="drawer-link">Hakkımızda</a>
+      <a href="#faaliyetlerimiz" class="drawer-link">Faaliyetlerimiz</a>
+      <a href="#iletisim" class="drawer-link">İletişim</a>
+      <a id="drawer-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp drawer-btn">
+        <i data-lucide="phone"></i>
+        <span>WhatsApp Destek</span>
+      </a>
+    </nav>
+  </div>
+  <div id="drawer-overlay" class="drawer-overlay"></div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div id="hero-bg" class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="badge hero-badge">
+          <span class="badge-dot"></span>
+          Doğal & Premium Kozmetik
+        </span>
+        <h1 id="hero-title" class="hero-title">Doğal Güzelliğin En Canlı Formülü</h1>
+        <p id="hero-subtitle" class="hero-subtitle">Gümüş Kozmetik ile kendinizi şımartın. Doğadan ilham alan esanslar ve cilt dostu formüllerle güzelliğinizi yeniden keşfedin.</p>
+        <div class="hero-actions">
+          <a href="#urunler" class="btn btn-primary">
+            <span>Ürünleri Keşfet</span>
+            <i data-lucide="shopping-bag"></i>
+          </a>
+          <a href="#iletisim" class="btn btn-secondary">
+            <span>İletişime Geç</span>
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bottom-curve">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1130.5,120,1051.13,110,985.66,92.83Z" class="curve-fill"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Quick Benefits -->
+  <section class="benefits-section">
+    <div class="container">
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon-wrapper">
+            <i data-lucide="check" class="benefit-icon"></i>
+          </div>
+          <h3>%100 Doğal Esanslar</h3>
+          <p>Özenle seçilmiş bitkisel kaynaklar ve doğal aromalar.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon-wrapper">
+            <i data-lucide="check" class="benefit-icon"></i>
+          </div>
+          <h3>Dermatolojik Testler</h3>
+          <p>Cildinizle tam uyumlu, onaylanmış güvenilir formüller.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon-wrapper">
+            <i data-lucide="check" class="benefit-icon"></i>
+          </div>
+          <h3>Sürdürülebilir Üretim</h3>
+          <p>Doğaya saygılı, çevre dostu paketleme ve üretim bilinci.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hakkımızda & Biz Kimiz (Notlar) -->
+  <section id="hakkimizda" class="section about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images">
+          <div class="about-image-card card-large">
+            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=600" alt="Doğal kozmetik hammaddeleri" class="about-img">
+          </div>
+          <div class="about-image-card card-small">
+            <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&q=80&w=400" alt="Kozmetik üretim" class="about-img">
+          </div>
+          <div class="glowing-orb"></div>
+        </div>
+        <div class="about-content">
+          <span class="badge section-badge">Biz Kimiz?</span>
+          <h2 id="about-title" class="section-title">Güzelliğe Değer Katan Hikayemiz</h2>
+          
+          <div class="about-tabs-container">
+            <div class="about-tabs">
+              <button id="tab-hakkimizda-btn" class="about-tab-btn active" data-tab="hakkimizda">Hakkımızda</button>
+              <button id="tab-bizkimiz-btn" class="about-tab-btn" data-tab="bizkimiz">Biz Kimiz?</button>
+            </div>
+            
+            <div class="about-tab-panes">
+              <div id="pane-hakkimizda" class="about-pane active">
+                <p id="about-text-hakkimizda">Gümüş Kozmetik olarak en kaliteli hammaddeler ile cildinize ve güzelliğinize eşlik ediyoruz. Doğal esanslar ve bilimsel formülleri bir araya getirerek, kalıcı kokular ve yenileyici bakım sunuyoruz.</p>
+              </div>
+              <div id="pane-bizkimiz" class="about-pane">
+                <p id="about-text-bizkimiz">Yenilikçi, dinamik ve müşteri odaklı vizyonumuzla, kozmetik sektöründe güven ve kaliteyi temsil etmek için çalışıyoruz. Sadece ürün satmıyor, yaşam alanlarınıza ve cildinize zarafet katmayı amaçlıyoruz.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ürünlerimiz Section -->
+  <section id="urunler" class="section products-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="badge section-badge">Özenle Seçilmiş</span>
+        <h2 class="section-title text-center">Koleksiyonlarımızı Keşfedin</h2>
+        <p class="section-subtitle">Sizin için Google Sheets üzerinden anlık olarak güncellenen, en popüler ve yeni ürünlerimiz.</p>
+      </div>
+
+      <!-- Dynamic Product Category Tabs -->
+      <div id="product-categories" class="categories-tabs">
+        <button class="category-btn active" data-category="all">Tüm Ürünler</button>
+        <!-- Dynamic tabs will be inserted here -->
+      </div>
+
+      <!-- Products Grid -->
+      <div id="products-grid" class="products-grid">
+        <!-- Dynamic product cards will be inserted here -->
+      </div>
+      
+      <!-- Empty State -->
+      <div id="products-empty" class="empty-state hidden">
+        <i data-lucide="shopping-bag" class="empty-icon"></i>
+        <h3>Aradığınız Kriterde Ürün Bulunmamaktadır</h3>
+        <p>Lütfen daha sonra tekrar kontrol edin veya bizimle WhatsApp üzerinden iletişime geçin.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Faaliyetlerimiz & Referanslar (Notlar) -->
+  <section id="faaliyetlerimiz" class="section activities-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="badge section-badge">Neler Yapıyoruz?</span>
+        <h2 id="activities-title" class="section-title text-center">Faaliyet Alanlarımız</h2>
+        <p id="activities-subtitle" class="section-subtitle">Gümüş Kozmetik olarak sektörde sunduğumuz hizmetler ve uzmanlık alanlarımız.</p>
+      </div>
+
+      <div id="activities-content" class="activities-content-box">
+        <!-- Dynamic activities markdown text will go here -->
+        <p>Yükleniyor...</p>
+      </div>
+
+      <!-- Referanslarımız Sub-section -->
+      <div id="referanslar-container" class="references-container">
+        <h3 class="references-title text-center">Referanslarımız</h3>
+        <div id="references-list" class="references-list">
+          <!-- Dynamic references will go here -->
+          <div class="reference-item">Güvenilir Çözüm Ortakları</div>
+          <div class="reference-item">Seçkin Güzellik Merkezleri</div>
+          <div class="reference-item">Premium Perakende Noktaları</div>
+          <div class="reference-item">Kuaför Salonları</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Yardım & SSS Section (Notlar) -->
+  <section id="yardim" class="section sss-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="badge section-badge">Sıkça Sorulan Sorular</span>
+        <h2 id="help-title" class="section-title text-center">Destek & Yardım</h2>
+        <p id="help-subtitle" class="section-subtitle">Ürünlerimiz, teslimat, iade süreçleri ve diğer merak ettikleriniz.</p>
+      </div>
+
+      <div id="faq-accordion" class="faq-accordion">
+        <!-- Dynamic FAQ list will go here -->
+        <p class="text-center">Yükleniyor...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- İletişim & Harita Section -->
+  <section id="iletisim" class="section contact-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="badge section-badge">Bize Ulaşın</span>
+        <h2 class="section-title text-center">İletişim Bilgilerimiz</h2>
+        <p class="section-subtitle">Sorularınız, iş birlikleri veya sipariş talepleriniz için bize ulaşmaktan çekinmeyin.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Information Card -->
+        <div class="contact-info-card">
+          <h3>İletişim Detayları</h3>
+          <p class="card-intro">Ofisimizi ziyaret edebilir, bizi arayabilir ya da WhatsApp üzerinden doğrudan sipariş kaydı oluşturabilirsiniz.</p>
+          
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="detail-icon-wrapper">
+                <i data-lucide="map-pin"></i>
+              </div>
+              <div class="detail-text">
+                <h4>Adres</h4>
+                <p id="contact-address-text">Yükleniyor...</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="detail-icon-wrapper">
+                <i data-lucide="phone"></i>
+              </div>
+              <div class="detail-text">
+                <h4>Telefon</h4>
+                <p id="contact-phone-text">Yükleniyor...</p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="detail-icon-wrapper">
+                <i data-lucide="mail"></i>
+              </div>
+              <div class="detail-text">
+                <h4>E-Posta</h4>
+                <p id="contact-email-text">Yükleniyor...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media & Actions -->
+          <div class="contact-socials-box">
+            <h4>Bizi Takip Edin</h4>
+            <div class="social-links">
+              <a id="social-instagram" href="#" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="Instagram">
+                <i data-lucide="instagram"></i>
+              </a>
+              <a id="social-whatsapp" href="#" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" aria-label="WhatsApp">
+                <i data-lucide="phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Map Card -->
+        <div class="contact-map-card">
+          <div id="map-iframe-container" class="map-container">
+            <!-- Dynamic map iframe will be injected here -->
+            <div class="map-placeholder">Harita Yükleniyor...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <a href="#" class="logo">
+          <span class="logo-accent">GK</span>
+          <span id="footer-brand-name" class="logo-text">Gümüş Kozmetik</span>
+        </a>
+        <p class="footer-moto">Doğal güzelliğin adresi. Google Sheets üzerinden Firebase altyapısı ile beslenen akıllı içerik yönetim sistemi.</p>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p class="copyright">&copy; <span id="copyright-year">2026</span> <strong id="copyright-brand">Gümüş Kozmetik</strong>. Tüm Hakları Saklıdır.</p>
+        <p class="credit">Powered by <a href="https://github.com/ucbeyigida" target="_blank" rel="noreferrer">Uçbeyi Gıda</a> & Antigravity</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Product Detail Modal -->
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close" aria-label="Kapat">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="modal-body-grid">
+        <div class="modal-image-wrapper">
+          <img id="modal-product-img" src="" alt="" class="modal-product-img">
+        </div>
+        <div class="modal-details-wrapper">
+          <span id="modal-product-category" class="badge">Kategori</span>
+          <h3 id="modal-product-name" class="modal-product-name">Ürün Adı</h3>
+          <p id="modal-product-desc" class="modal-product-desc">Ürün açıklaması burada yer alacaktır...</p>
+          <div class="modal-price-box">
+            <span class="price-label">Fiyat:</span>
+            <span id="modal-product-price" class="product-price">--- TL</span>
+          </div>
+          <div class="modal-actions">
+            <a id="modal-order-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp modal-btn">
+              <i data-lucide="phone"></i>
+              <span>WhatsApp ile Sipariş Ver</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-overlay" class="modal-overlay"></div>
+  </div>
+
+  <!-- Main Application Script Bundle -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

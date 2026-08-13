@@ -1,0 +1,15 @@
+rules_version = '2';
+
+service cloudfirestore {
+  match /databases/{database}/documents {
+    
+    // Allow public read-only access to all collections (settings, products, notes)
+    // to enable the web application to display content dynamically.
+    // Block all write attempts from client-side SDKs.
+    // (Writes are securely handled by your Google Sheets Apps Script using admin-level credentials).
+    match /{document=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+  }
+}

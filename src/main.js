@@ -3,20 +3,6 @@
    ========================================== */
 
 import { db, doc, getDoc } from './firebase.js';
-import { 
-  createIcons, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Instagram, 
-  Menu, 
-  X, 
-  ArrowRight, 
-  Check, 
-  ChevronDown, 
-  ShoppingBag, 
-  ExternalLink 
-} from 'lucide';
 
 // Global state variables
 let globalSettings = {};
@@ -1224,21 +1210,25 @@ function initScrollReveals() {
    ========================================== */
 
 function triggerLucide() {
-  createIcons({
-    icons: { 
-      Phone, 
-      Mail, 
-      MapPin, 
-      Instagram, 
-      Menu, 
-      X, 
-      ArrowRight, 
-      Check, 
-      ChevronDown, 
-      ShoppingBag, 
-      ExternalLink 
-    }
-  });
+  if (window.lucide && typeof window.lucide.createIcons === 'function') {
+    window.lucide.createIcons({
+      icons: { 
+        Phone: window.lucide.Phone, 
+        Mail: window.lucide.Mail, 
+        MapPin: window.lucide.MapPin, 
+        Instagram: window.lucide.Instagram, 
+        Menu: window.lucide.Menu, 
+        X: window.lucide.X, 
+        ArrowRight: window.lucide.ArrowRight, 
+        Check: window.lucide.Check, 
+        ChevronDown: window.lucide.ChevronDown, 
+        ShoppingBag: window.lucide.ShoppingBag, 
+        ExternalLink: window.lucide.ExternalLink 
+      }
+    });
+  } else {
+    console.log("Lucide CDN is loading asynchronously or not present.");
+  }
 }
 
 function hexToRgb(hex) {

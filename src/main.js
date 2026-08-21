@@ -419,13 +419,67 @@ document.addEventListener('DOMContentLoaded', async () => {
     globalProducts = mockProducts;
   }
 
+  // --- SAFE NORMALIZATION LAYER FOR GOOGLE SHEETS TYPE MISMATCHES ---
+  try {
+    // 1. Normalize Settings (every flat property should be cast to a string)
+    if (globalSettings && typeof globalSettings === 'object') {
+      Object.keys(globalSettings).forEach(k => {
+        if (globalSettings[k] !== undefined && globalSettings[k] !== null) {
+          globalSettings[k] = String(globalSettings[k]);
+        }
+      });
+    } else {
+      globalSettings = mockSettings;
+    }
+
+    // 2. Normalize Notes (ensure nested title & content properties are strings)
+    if (globalNotes && typeof globalNotes === 'object') {
+      Object.keys(globalNotes).forEach(k => {
+        const note = globalNotes[k];
+        if (note) {
+          if (typeof note === 'object') {
+            if (note.title !== undefined && note.title !== null) note.title = String(note.title);
+            if (note.content !== undefined && note.content !== null) note.content = String(note.content);
+          } else {
+            globalNotes[k] = { title: "", content: String(note) };
+          }
+        }
+      });
+    } else {
+      globalNotes = mockNotes;
+    }
+
+    // 3. Normalize Products (ensure all product fields are strings to avoid TypeError)
+    if (Array.isArray(globalProducts)) {
+      globalProducts.forEach(p => {
+        if (p && typeof p === 'object') {
+          ['id', 'category', 'name', 'description', 'price', 'imageUrl', 'location'].forEach(field => {
+            if (p[field] !== undefined && p[field] !== null) {
+              p[field] = String(p[field]);
+            }
+          });
+        }
+      });
+    } else {
+      globalProducts = mockProducts;
+    }
+  } catch (normError) {
+    console.error("Error during sheets data normalization, using fallback:", normError);
+  }
+
   // Bind and Render everything!
-  applyThemeSettings();
-  initLanguageSelector(); // Handles initial rendering with the correct language
+  try {
+    applyThemeSettings();
+    initLanguageSelector(); // Handles initial rendering with the correct language
+  } catch (renderError) {
+    console.error("Critical rendering error during initial draw:", renderError);
+  }
   
-  // Hide loading spinner after brief smooth delay
+  // Hide loading spinner after brief smooth delay (guaranteed to execute even on rendering error)
   setTimeout(() => {
-    loaderEl.classList.add('fade-out');
+    if (loaderEl) {
+      loaderEl.classList.add('fade-out');
+    }
   }, 400);
 });
 
@@ -557,7 +611,7 @@ function applyThemeSettings() {
 
 function initLanguageSelector() {
   // Desktop selection buttons
-  document.querySelectorAll('#lang-menu-desktop .lang-item').forEach(item => {
+  document.querySelectorAll('.lang-dropdown .lang-item').forEach(item => {
     item.addEventListener('click', (e) => {
       e.preventDefault();
       const lang = item.getAttribute('data-lang');
@@ -566,7 +620,7 @@ function initLanguageSelector() {
   });
   
   // Mobile selection buttons
-  document.querySelectorAll('#lang-menu-mobile .lang-item').forEach(item => {
+  document.querySelectorAll('.mobile-lang-selector .lang-item').forEach(item => {
     item.addEventListener('click', (e) => {
       e.preventDefault();
       const lang = item.getAttribute('data-lang');
@@ -586,11 +640,17 @@ function switchLanguage(lang) {
   document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
   document.documentElement.lang = lang;
   
-  // Update desktop selector current label
-  const dropdownLabel = document.getElementById('current-lang-text');
-  if (dropdownLabel) {
-    dropdownLabel.innerText = lang.toUpperCase();
-  }
+  // Update desktop selector current flag & text labels
+  const currentFlagEl = document.querySelector('.lang-current-btn .lang-flag');
+  const currentCodeEl = document.querySelector('.lang-current-btn .lang-code');
+  const langFlags = {
+    tr: '🇹🇷',
+    en: '🇬🇧',
+    ar: '🇸🇦',
+    ru: '🇷🇺'
+  };
+  if (currentFlagEl) currentFlagEl.innerText = langFlags[lang] || '🇹🇷';
+  if (currentCodeEl) currentCodeEl.innerText = lang.toUpperCase();
   
   // Update active state class on selection buttons
   document.querySelectorAll('.lang-item').forEach(btn => {

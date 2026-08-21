@@ -39,18 +39,41 @@
       
       <!-- Desktop Menu -->
       <nav class="nav-desktop">
-        <a href="#" class="nav-link active">Ana Sayfa</a>
-        <a href="#urunler" class="nav-link">Ürünlerimiz</a>
-        <a href="#hakkimizda" class="nav-link">Hakkımızda</a>
-        <a href="#faaliyetlerimiz" class="nav-link">Faaliyetlerimiz</a>
-        <a href="#iletisim" class="nav-link">İletişim</a>
+        <a href="#" class="nav-link active" data-i18n="nav_home">Ana Sayfa</a>
+        <a href="#urunler" class="nav-link" data-i18n="nav_products">Ürünlerimiz</a>
+        <a href="#hakkimizda" class="nav-link" data-i18n="nav_about">Hakkımızda</a>
+        <a href="#faaliyetlerimiz" class="nav-link" data-i18n="nav_activities">Faaliyetlerimiz</a>
+        <a href="#iletisim" class="nav-link" data-i18n="nav_contact">İletişim</a>
       </nav>
 
       <!-- CTA & Mobile Toggle -->
       <div class="header-actions">
+        <!-- Language Selector Dropdown -->
+        <div class="lang-selector">
+          <button class="lang-current-btn" aria-haspopup="true" aria-expanded="false" aria-label="Language / Dil">
+            <span class="lang-flag">🇹🇷</span>
+            <span class="lang-code">TR</span>
+            <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i>
+          </button>
+          <div class="lang-dropdown">
+            <button class="lang-item active" data-lang="tr">
+              <span class="lang-flag">🇹🇷</span> Türkçe
+            </button>
+            <button class="lang-item" data-lang="en">
+              <span class="lang-flag">🇬🇧</span> English
+            </button>
+            <button class="lang-item" data-lang="ar">
+              <span class="lang-flag">🇸🇦</span> العربية
+            </button>
+            <button class="lang-item" data-lang="ru">
+              <span class="lang-flag">🇷🇺</span> Русский
+            </button>
+          </div>
+        </div>
+
         <a id="header-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp hide-mobile">
           <i data-lucide="phone"></i>
-          <span>Destek Hattı</span>
+          <span data-i18n="support_line">Destek Hattı</span>
         </a>
         <button id="menu-toggle" class="btn-icon menu-toggle" aria-label="Menüyü Aç">
           <i data-lucide="menu"></i>
@@ -71,14 +94,26 @@
       </button>
     </div>
     <nav class="drawer-nav">
-      <a href="#" class="drawer-link active">Ana Sayfa</a>
-      <a href="#urunler" class="drawer-link">Ürünlerimiz</a>
-      <a href="#hakkimizda" class="drawer-link">Hakkımızda</a>
-      <a href="#faaliyetlerimiz" class="drawer-link">Faaliyetlerimiz</a>
-      <a href="#iletisim" class="drawer-link">İletişim</a>
+      <a href="#" class="drawer-link active" data-i18n="nav_home">Ana Sayfa</a>
+      <a href="#urunler" class="drawer-link" data-i18n="nav_products">Ürünlerimiz</a>
+      <a href="#hakkimizda" class="drawer-link" data-i18n="nav_about">Hakkımızda</a>
+      <a href="#faaliyetlerimiz" class="drawer-link" data-i18n="nav_activities">Faaliyetlerimiz</a>
+      <a href="#iletisim" class="drawer-link" data-i18n="nav_contact">İletişim</a>
+      
+      <!-- Mobile Language Selector Row -->
+      <div class="mobile-lang-selector-wrapper">
+        <div class="mobile-lang-title" data-i18n="nav_language">Dil Seçimi / Language</div>
+        <div class="mobile-lang-selector">
+          <button class="lang-item active" data-lang="tr">🇹🇷 TR</button>
+          <button class="lang-item" data-lang="en">🇬🇧 EN</button>
+          <button class="lang-item" data-lang="ar">🇸🇦 AR</button>
+          <button class="lang-item" data-lang="ru">🇷🇺 RU</button>
+        </div>
+      </div>
+
       <a id="drawer-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp drawer-btn">
         <i data-lucide="phone"></i>
-        <span>WhatsApp Destek</span>
+        <span data-i18n="support_whatsapp">WhatsApp Destek</span>
       </a>
     </nav>
   </div>
@@ -92,17 +127,17 @@
       <div class="hero-content">
         <span class="badge hero-badge">
           <span class="badge-dot"></span>
-          Doğal & Premium Kozmetik
+          <span data-i18n="hero_badge_text">Doğal & Premium Kozmetik</span>
         </span>
         <h1 id="hero-title" class="hero-title">Doğal Güzelliğin En Canlı Formülü</h1>
         <p id="hero-subtitle" class="hero-subtitle">Gümüş Kozmetik ile kendinizi şımartın. Doğadan ilham alan esanslar ve cilt dostu formüllerle güzelliğinizi yeniden keşfedin.</p>
         <div class="hero-actions">
           <a href="#urunler" class="btn btn-primary">
-            <span>Ürünleri Keşfet</span>
+            <span data-i18n="hero_explore_btn">Ürünleri Keşfet</span>
             <i data-lucide="shopping-bag"></i>
           </a>
           <a href="#iletisim" class="btn btn-secondary">
-            <span>İletişime Geç</span>
+            <span data-i18n="hero_contact_btn">İletişime Geç</span>
             <i data-lucide="arrow-right"></i>
           </a>
         </div>
@@ -123,22 +158,22 @@
           <div class="benefit-icon-wrapper">
             <i data-lucide="check" class="benefit-icon"></i>
           </div>
-          <h3>%100 Doğal Esanslar</h3>
-          <p>Özenle seçilmiş bitkisel kaynaklar ve doğal aromalar.</p>
+          <h3 data-i18n="benefit_1_title">Premium Esans Kalitesi</h3>
+          <p data-i18n="benefit_1_desc">Dünyanın en seçkin üreticilerinden ithal edilen saf ve kalıcı hammaddeler.</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon-wrapper">
             <i data-lucide="check" class="benefit-icon"></i>
           </div>
-          <h3>Dermatolojik Testler</h3>
-          <p>Cildinizle tam uyumlu, onaylanmış güvenilir formüller.</p>
+          <h3 data-i18n="benefit_2_title">Dermatolojik Onay</h3>
+          <p data-i18n="benefit_2_desc">Tüm cilt bakım ve kişisel bakım serilerimiz akredite laboratuvarlarda test edilmiştir.</p>
         </div>
         <div class="benefit-card">
           <div class="benefit-icon-wrapper">
             <i data-lucide="check" class="benefit-icon"></i>
           </div>
-          <h3>Sürdürülebilir Üretim</h3>
-          <p>Doğaya saygılı, çevre dostu paketleme ve üretim bilinci.</p>
+          <h3 data-i18n="benefit_3_title">Sürdürülebilir Üretim</h3>
+          <p data-i18n="benefit_3_desc">Doğaya saygılı, çevre dostu paketleme ve üretim bilinci.</p>
         </div>
       </div>
     </div>
@@ -159,7 +194,7 @@
           </div>
         </div>
         <div class="brand-showcase-content reveal">
-          <span class="badge section-badge">Lüks Cilt Bakımı</span>
+          <span class="badge section-badge" data-i18n="monnica_badge">Lüks Cilt Bakımı</span>
           <h2 class="section-title">MONNICA SKIN CARE & CLEAN END</h2>
           <div class="brand-bilingual-container">
             <div class="brand-lang-block TR">
@@ -173,6 +208,18 @@
               <p>The geography we live in is adorned with traces of thousands of years of multiculturalism and is filled with thousands of mysterious beauty secrets that have been passed down to the present day through epic tales. We won’t reveal the secrets to you. We develop and continue to develop alternative solutions to minimize the inevitable effects of time and wear and tear.</p>
               <p>MONNICA SKIN CARE grows and evolves every day to be a guide for the care we show ourselves. Through our national and international partnerships, we have brought together the technologies of leading companies specializing in their fields in the cosmetic and medical sectors at MONNICA SKINCARE clinics and sales points for your benefit.</p>
               <p>Your trust in all our colleagues and our goals motivates us. MONNICA SKINCARE is produced in MONNICA SKINCARE facilities that comply with relevant regulations and necessary certifications, contributing valuable products of different qualities to the cosmetics industry. As MONNICA SKINCARE, we do not test on animals anywhere in the world. We are proud to be close to you. We will keep your suggestions and contributions as part of MONNICA SKINCARE values. Your satisfaction is an invaluable asset to us. Best regards.</p>
+            </div>
+            <div class="brand-lang-block AR" style="display: none;">
+              <p><strong>صحة الإنسان تأتي قبل كل شيء...</strong> الخبرة تكتسب بالممارسة والعمل. إن نهجنا الذي يتطلب حماية حقيقية ورعاية فائقة ملخص في شعارنا MONNICA SKIN CARE المدعوم بخبراتنا الطويلة.</p>
+              <p>الجغرافيا التي نعيش فيها مزينة بآثار آلاف السنين من التعددية الثقافية، وهي مليئة بالآلاف من أسرار الجمال الغامضة التي تم نقلها إلى يومنا هذا من خلال الحكايات والقصص الأسطورية. لن نكشف لكم هذه الأسرار، لكننا نطور ونستمر في تطوير حلول بديلة لتقليل الآثار الحتمية للزمن والتقدم في السن.</p>
+              <p>تنمو وتتطور علامة MONNICA SKIN CARE كل يوم لتكون دليلاً للعناية التي نظهرها لأنفسنا. من خلال شراكاتنا المحلية والدولية، قمنا بجمع تقنيات الشركات الرائدة المتخصصة في مجالاتها في قطاعي التجميل والعناية بالبشرة لتقديمها في عيادات ومنافذ بيع MONNICA SKINCARE لخدمتكم.</p>
+              <p>إن ثقتكم في جميع زملائنا وأهدافنا هي دافعنا الأكبر. يتم إنتاج MONNICA SKINCARE في مصانعنا المجهزة المتوافقة مع اللوائح الدولية والمعايير الصحية، مما يساهم بمنتجات قيمة وفريدة لقطاع التجميل. بصفتنا MONNICA SKINCARE، نحن لا نجري تجارب على الحيوانات في أي مكان في العالم. نحن فخورون بأن نكون قريبين منكم، وسنحتفظ باقتراحاتكم ومساهماتكم كجزء أساسي من قيمنا. إن رضاكم هو أثمن مكسب لنا. مع خالص الاحترام.</p>
+            </div>
+            <div class="brand-lang-block RU" style="display: none;">
+              <p><strong>Здоровье человека превыше всего...</strong> Опыт приобретается на практике. Наш подход, требующий реальной защиты и бережного ухода, воплощен в нашем девизе MONNICA SKIN CARE, который подтвержден годами успешной работы.</p>
+              <p>Географический регион, в котором мы живем, украшен следами тысячелетней многокультурной истории и полон загадочных секретов красоты, дошедших до наших дней через легенды и предания. Мы не станем раскрывать вам все секреты. Вместо этого мы создаем и продолжаем совершенствовать альтернативные формулы, чтобы минимизировать неизбежные следы времени и внешних воздействий.</p>
+              <p>Бренд MONNICA SKIN CARE растет и развивается каждый день, становясь вашим личным проводником в мире заботы о себе. Благодаря национальным и международным партнерствам мы объединили технологии ведущих мировых лабораторий, специализирующихся в области косметологии, и представили их в клиниках и точках продаж MONNICA SKINCARE специально для вас.</p>
+              <p>Ваше доверие мотивирует всю нашу команду. Продукция MONNICA SKINCARE производится на сертифицированных предприятиях, соответствующих строгим международным регламентам, привнося новое качество в индустрию красоты. Мы в MONNICA SKINCARE принципиально не тестируем продукцию на животных ни в одной стране мира. Мы гордимся возможностью быть ближе к вам и ценим каждый ваш отзыв и пожелание. Ваше удовлетворение — наша главная награда. С уважением.</p>
             </div>
           </div>
         </div>
@@ -194,8 +241,8 @@
           <div class="glowing-orb"></div>
         </div>
         <div class="about-content">
-          <span class="badge section-badge">Biz Kimiz?</span>
-          <h2 id="about-title" class="section-title">Kurumsal Değerlerimiz ve İlkelerimiz</h2>
+          <span class="badge section-badge" data-i18n="about_badge">Biz Kimiz?</span>
+          <h2 id="about-title" class="section-title" data-i18n="about_title">Kurumsal Değerlerimiz ve İlkelerimiz</h2>
           
           <div class="about-tabs-container">
             <div class="about-tabs">
@@ -229,14 +276,14 @@
   <section id="urunler" class="section products-section">
     <div class="container">
       <div class="section-header text-center">
-        <span class="badge section-badge">Özenle Seçilmiş</span>
-        <h2 class="section-title text-center">Koleksiyonlarımızı Keşfedin</h2>
-        <p class="section-subtitle">Sizin için Google Sheets üzerinden anlık olarak güncellenen, en popüler ve yeni ürünlerimiz.</p>
+        <span class="badge section-badge" data-i18n="products_badge">Özenle Seçilmiş</span>
+        <h2 class="section-title text-center" data-i18n="products_title">Koleksiyonlarımızı Keşfedin</h2>
+        <p class="section-subtitle" data-i18n="products_subtitle">Sizin için Google Sheets üzerinden anlık olarak güncellenen, en popüler ve yeni ürünlerimiz.</p>
       </div>
 
       <!-- Dynamic Product Category Tabs -->
       <div id="product-categories" class="categories-tabs">
-        <button class="category-btn active" data-category="all">Tüm Ürünler</button>
+        <button class="category-btn active" data-category="all" data-i18n="products_all">Tüm Ürünler</button>
         <!-- Dynamic tabs will be inserted here -->
       </div>
 
@@ -248,8 +295,8 @@
       <!-- Empty State -->
       <div id="products-empty" class="empty-state hidden">
         <i data-lucide="shopping-bag" class="empty-icon"></i>
-        <h3>Aradığınız Kriterde Ürün Bulunmamaktadır</h3>
-        <p>Lütfen daha sonra tekrar kontrol edin veya bizimle WhatsApp üzerinden iletişime geçin.</p>
+        <h3 data-i18n="products_empty_title">Aradığınız Kriterde Ürün Bulunmamaktadır</h3>
+        <p data-i18n="products_empty_desc">Lütfen daha sonra tekrar kontrol edin veya bizimle WhatsApp üzerinden iletişime geçin.</p>
       </div>
     </div>
   </section>
@@ -258,9 +305,9 @@
   <section id="faaliyetlerimiz" class="section activities-section">
     <div class="container">
       <div class="section-header text-center">
-        <span class="badge section-badge">Neler Yapıyoruz?</span>
-        <h2 id="activities-title" class="section-title text-center">Faaliyet Alanlarımız</h2>
-        <p id="activities-subtitle" class="section-subtitle">Gümüş Kozmetik olarak sektörde sunduğumuz hizmetler ve uzmanlık alanlarımız.</p>
+        <span class="badge section-badge" data-i18n="activities_badge">Neler Yapıyoruz?</span>
+        <h2 id="activities-title" class="section-title text-center" data-i18n="activities_title">Faaliyet Alanlarımız</h2>
+        <p id="activities-subtitle" class="section-subtitle" data-i18n="activities_subtitle">Gümüş Kozmetik olarak sektörde sunduğumuz hizmetler ve uzmanlık alanlarımız.</p>
       </div>
 
       <div id="activities-content" class="activities-content-box reveal">
@@ -269,7 +316,7 @@
 
       <!-- Referanslarımız Sub-section -->
       <div id="referanslar-container" class="references-container reveal">
-        <h3 class="references-title text-center">Referanslarımız ve Ortaklarımız</h3>
+        <h3 class="references-title text-center" data-i18n="references_title">Referanslarımız ve Ortaklarımız</h3>
         <div id="references-list" class="references-list">
           <!-- Dynamic references will go here -->
         </div>
@@ -281,9 +328,9 @@
   <section id="yardim" class="section faq-section">
     <div class="container">
       <div class="section-header text-center">
-        <span class="badge section-badge">Soru & Cevap</span>
-        <h2 id="help-title" class="section-title text-center">Sıkça Sorulan Sorular</h2>
-        <p class="section-subtitle">Gümüş Kozmetik, sipariş, kargo ve kalite politikamız ile ilgili en çok merak edilen konular.</p>
+        <span class="badge section-badge" data-i18n="faq_badge">Soru & Cevap</span>
+        <h2 id="help-title" class="section-title text-center" data-i18n="faq_title">Sıkça Sorulan Sorular</h2>
+        <p class="section-subtitle" data-i18n="faq_subtitle">Gümüş Kozmetik, sipariş, kargo ve kalite politikamız ile ilgili en çok merak edilen konular.</p>
       </div>
 
       <div id="faq-accordion" class="faq-accordion reveal">
@@ -296,16 +343,16 @@
   <section id="iletisim" class="section contact-section">
     <div class="container">
       <div class="section-header text-center">
-        <span class="badge section-badge">Bize Ulaşın</span>
-        <h2 class="section-title text-center">İletişim & Mağaza Konumu</h2>
-        <p class="section-subtitle">Soru, görüş ve toptan/perakende sipariş talepleriniz için bizimle irtibata geçebilirsiniz.</p>
+        <span class="badge section-badge" data-i18n="contact_badge">Bize Ulaşın</span>
+        <h2 class="section-title text-center" data-i18n="contact_title">İletişim & Mağaza Konumu</h2>
+        <p class="section-subtitle" data-i18n="contact_subtitle">Soru, görüş ve toptan/perakende sipariş talepleriniz için bizimle irtibata geçebilirsiniz.</p>
       </div>
 
       <div class="contact-grid">
         <!-- Contact Information Card -->
         <div class="contact-info-card reveal">
           <h3>GK GÜMÜŞ KOZMETİK</h3>
-          <p class="card-intro">Ofisimizi ziyaret edebilir, bizi arayabilir ya da WhatsApp üzerinden doğrudan sipariş kaydı oluşturabilirsiniz.</p>
+          <p class="card-intro" data-i18n="contact_card_intro">Ofisimizi ziyaret edebilir, bizi arayabilir ya da WhatsApp üzerinden doğrudan sipariş kaydı oluşturabilirsiniz.</p>
           
           <div class="contact-details">
             <div class="contact-detail-item">
@@ -313,7 +360,7 @@
                 <i data-lucide="map-pin"></i>
               </div>
               <div class="detail-text">
-                <h4>Adres</h4>
+                <h4 data-i18n="contact_address_label">Adres</h4>
                 <p id="contact-address-text">Yükleniyor...</p>
               </div>
             </div>
@@ -323,7 +370,7 @@
                 <i data-lucide="phone"></i>
               </div>
               <div class="detail-text">
-                <h4>Telefon</h4>
+                <h4 data-i18n="contact_phone_label">Telefon</h4>
                 <p id="contact-phone-text">Yükleniyor...</p>
               </div>
             </div>
@@ -333,7 +380,7 @@
                 <i data-lucide="mail"></i>
               </div>
               <div class="detail-text">
-                <h4>E-Posta</h4>
+                <h4 data-i18n="contact_email_label">E-Posta</h4>
                 <p id="contact-email-text">Yükleniyor...</p>
               </div>
             </div>
@@ -341,7 +388,7 @@
 
           <!-- Social Media & Actions -->
           <div class="contact-socials-box">
-            <h4>Bizi Takip Edin</h4>
+            <h4 data-i18n="contact_follow_us">Bizi Takip Edin</h4>
             <div class="social-links">
               <a id="social-instagram" href="#" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="Instagram">
                 <i data-lucide="instagram"></i>
@@ -372,12 +419,12 @@
           <span class="logo-accent">GK</span>
           <span id="footer-brand-name" class="logo-text">Gümüş Kozmetik</span>
         </a>
-        <p class="footer-moto">Doğal güzelliğin adresi. Google Sheets üzerinden Firebase altyapısı ile beslenen akıllı içerik yönetim sistemi.</p>
+        <p class="footer-moto" data-i18n="footer_moto">Doğal güzelliğin adresi. Google Sheets üzerinden Firebase altyapısı ile beslenen akıllı içerik yönetim sistemi.</p>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-bottom">
-        <p class="copyright">&copy; <span id="copyright-year">2026</span> <strong id="copyright-brand">Gümüş Kozmetik</strong>. Tüm Hakları Saklıdır.</p>
-        <p class="credit">Bu site CTY - Chook Temiz Yalova tarafından kodlanmıştır.</p>
+        <p class="copyright">&copy; <span id="copyright-year">2026</span> <strong id="copyright-brand">Gümüş Kozmetik</strong>. <span data-i18n="footer_copyright">Tüm Hakları Saklıdır.</span></p>
+        <p class="credit" data-i18n="footer_credit">Bu site CTY - Chook Temiz Yalova tarafından kodlanmıştır.</p>
       </div>
     </div>
   </footer>
@@ -397,13 +444,13 @@
           <h3 id="modal-product-name" class="modal-product-name">Ürün Adı</h3>
           <p id="modal-product-desc" class="modal-product-desc">Ürün açıklaması burada yer alacaktır...</p>
           <div class="modal-price-box">
-            <span class="price-label">Fiyat:</span>
+            <span class="price-label" data-i18n="modal_price_label">Fiyat:</span>
             <span id="modal-product-price" class="product-price">--- TL</span>
           </div>
           <div class="modal-actions">
             <a id="modal-order-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp modal-btn">
               <i data-lucide="phone"></i>
-              <span>WhatsApp ile Sipariş Ver</span>
+              <span data-i18n="modal_order_btn">WhatsApp ile Sipariş Ver</span>
             </a>
           </div>
         </div>

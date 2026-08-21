@@ -1553,3 +1553,132 @@ button {
   .hero-actions { flex-direction: column; width: 100%; }
   .hero-actions .btn { width: 100%; }
 }
+
+/* MONNICA Brand Showcase */
+.brand-showcase-section {
+  background: var(--color-bg-base);
+  padding: 100px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.brand-showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.brand-showcase-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-monogram-box {
+  width: 100%;
+  max-width: 400px;
+  background: #03061A; /* Deep Navy from Clean End logo */
+  border: 4px double var(--color-primary);
+  padding: 50px 30px;
+  text-align: center;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-monogram-box::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid rgba(197, 168, 128, 0.3);
+  pointer-events: none;
+}
+
+.brand-logo-text {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  letter-spacing: 0.15rem;
+  font-weight: 300;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.brand-logo-sub {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  letter-spacing: 0.35rem;
+  color: var(--color-primary);
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.brand-logo-line {
+  width: 60px;
+  height: 1px;
+  background: var(--color-primary);
+  margin: 24px auto;
+}
+
+.brand-logo-tag {
+  font-size: 0.8rem;
+  letter-spacing: 0.15rem;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+}
+
+.brand-logo-badge {
+  background: #0F172A;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 8px 20px;
+  display: inline-block;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  margin: 16px 0;
+  border-radius: var(--radius-sm);
+}
+
+.brand-logo-organic {
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+}
+
+.brand-bilingual-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.brand-lang-block {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.brand-lang-block p {
+  margin-bottom: 16px;
+}
+
+.brand-lang-block p strong {
+  color: var(--color-text-main);
+}
+
+@media (max-width: 992px) {
+  .brand-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .brand-bilingual-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

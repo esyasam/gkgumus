@@ -26,38 +26,46 @@ let activeCategory = 'all';
 
 // Fallback Mock Data (Displays a beautiful layout before the first Google Sheet sync)
 const mockSettings = {
-  site_title: "Gümüş Kozmetik | Doğal Güzellik",
-  site_description: "Doğadan ilham alan esanslar ve cilt dostu premium bakım formülleri.",
-  primary_color: "#8B5CF6",
-  secondary_color: "#EC4899",
+  site_title: "MONNICA SKIN CARE & CLEAN END | GK GÜMÜŞ KOZMETİK",
+  site_description: "Premium Cilt Bakım Formülleri, Private Label ve İleri Seviye Kozmetik Çözümleri.",
+  primary_color: "#C5A880",
+  secondary_color: "#9C866B",
   background_theme: "dark",
-  hero_title: "Doğal Güzelliğin En Canlı Formülü",
-  hero_subtitle: "Gümüş Kozmetik ile kendinizi şımartın. Doğadan ilham alan saf esanslar ve cildinizi tazeleyen yenileyici bakım formülleriyle zarafetinizi keşfedin.",
+  hero_title: "MONNICA SKIN CARE",
+  hero_subtitle: "FRESH CLEAN Every Day — Natural, Pure, Organic. İleri teknoloji ve binlerce yıllık güzellik sırları MONNICA laboratuvarlarında buluştu.",
   hero_bg_image: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&q=80&w=1600",
   whatsapp_no: "905000000000",
-  instagram: "gk_gumus",
-  contact_email: "info@gumuskozmetik.com",
-  contact_phone: "+90 (532) 123 45 67",
-  address: "Merkez Mahallesi, Kozmetik Caddesi No:12, Şişli / İstanbul",
-  maps_embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.349830588698!2d28.981881476566085!3d41.0613271161208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab6fc82500001%3A0x640b080512684824!2zTmlsc8SxbiBLb3ptZXRpayBMdGQuIMWedGku!5e0!3m2!1str!2str!4v1715600000000!5m2!1str!2str"
+  instagram: "monnicaskincare",
+  contact_email: "info@gkgumuskozmetik.com",
+  contact_phone: "",
+  address: "Samanlı Mah. 7. Sevinç Sok. No:17 YILDIRIM / BURSA",
+  maps_embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.882194519965!2d29.123287311756578!3d40.18941057134375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca3f5e55555555%3A0x5555555555555555!2sSamanl%C4%B1%2C%207.%20Sevin%C3%A7%20Sk.%20No%3A17%2C%2016280%20Y%C4%B1ld%C4%B1r%C4%B1m%2FBursa!5e0!3m2!1str!2str!4v1715600000000!5m2!1str!2str"
 };
 
 const mockNotes = {
   hakkimizda: {
-    title: "Hikayemiz",
-    content: "Gümüş Kozmetik olarak kurulduğumuz günden bu yana doğallık ve estetiği bir araya getirmeyi amaç ediniyoruz. Cildinize zarafet, yaşam alanlarınıza ise kalıcı ferahlık katan formüllerimizle, her üründe üst düzey kalite standartlarını benimsiyoruz.\n\nÖzel laboratuvarlarımızda dermatolojik olarak test edilen ürünlerimizle, doğanın şifalı özlerini saf haliyle sizlere ulaştırıyoruz. İnovasyonu ve sürdürülebilirliği temel alarak çevre dostu adımlarla büyüyoruz."
+    title: "Hakkımızda",
+    content: "Kalite, tecrübe ve günün teknolojisini de kullanarak siz değerli müşterilerimize hizmet vermeye çalışan firmamız 2004 yılında BURSA'da kurulmuş olup; kimya, kozmetik ve parfüm sektörlerine hizmet vermektedir. Bunu yaparken, kaliteli doğru hammaddeler ile kalite vazgeçilmez temel prensibimizdir. Mantalitemiz insana değer verme, insana yatırım yapma, onların taleplerini en kısa sürede ve en ekonomik biçimde karşılayarak memnuniyetlerini sağlamaktır.\n\nÇevre ile ilgili tüm mevzuat ve yasal düzenlemelere uymayı, enerji ve doğal kaynakları tasarruflu kullanmayı, hammadde seçiminde çevre duyarlılıklarına önem vermeyi ve bu maddelerin olumsuz etkilerini kontrol altına almayı, çevre kirliliğinin önlenmesini, çevrenin korunmasını, “Sıfır Atık” prensibi ile atıkların en aza indirilmesini ve kaynağında ayırarak en verimli geri dönüşümü sağlamayı, çalışanlarımızı çevre eğitimleriyle bilinçlendirmeyi, çevre performansının arttırılması için çevre yönetim sisteminin sürekli iyileştirilmesini ve bu uygulamaların devamını sağlamayı taahhüt ederiz.\n\nÇalışanlarımıza uygun ve güvenli çalışma ortamları hazırlayarak, sürekli gelişmeleri ve kendilerini yenileyebilmeleri için onları eğitim, seminer ve sosyal aktivitelerle desteklemek, tüm alanlarımızda “Sıfır Kaza” hedefi ile çalışmak, yaralanmaları ve sağlık bozulmalarını önlenmek ve iş sağlığı ve güvenliği kurallarının ve yasal yükümlülüklerinin eksiksiz olarak uygulanmasını sağlamak şirketimizin teminatı altındadır."
   },
-  biz_kimiz: {
-    title: "Vizyonumuz & Misyonumuz",
-    content: "Biz, doğallığın en saf halini teknolojiyle birleştirip kişisel bakımı lüks bir ritüele dönüştüren tutkulu bir ekibiz. Gümüş Kozmetik ailesi olarak misyonumuz, çevre dostu hammaddeler kullanarak cildinize zarar vermeyen, doğanın dengesini koruyan formüller geliştirmektir.\n\nVizyonumuz ise kozmetik ve kişisel bakım alanında kaliteli hizmet anlayışımızla yerli üretimin gücünü tüm dünyaya göstererek öncü bir küresel marka olmaktır."
+  vizyon_misyon: {
+    title: "Vizyon & Misyon",
+    content: "### Vizyonumuz\nSürekli gelişim odaklı yapımızla TEMİZLİK ve KOZMETİK sektörlerinde farklılığı, uzmanlığı, güvenirliğiyle, kaliteden asla ödün vermeden, sosyal sorumluluk bilinciyle, müşteri hayallerini kusursuzlukla gerçeğe taşıyıp, ödülünü müşterilerinden (paydaşlarından) alan lider bir firma olmaktır.\n\n### Misyonumuz\nÜstün kalite ve uygun fiyatta, güvenilir ürünler ve hizmetleri ile paydaşlarımızın beklentilerini aşarak; üretim ve araştırmalarımızı sürekli arttırarak; insan ve çevre bilincini sürekli ön planda tutarak sektör ve ülke gelişimine katkıda bulunmaktır."
+  },
+  kalite_politikasi: {
+    title: "Kalite Politikamız",
+    content: "GK GÜMÜŞ KOZMETİK Kimya olarak Ulusal ve Uluslararası Mevzuatlar, Etik İlkeler ve ISO Kalite Yönetim Sistemleri doğrultusunda;\n\n- Müşterilerimizin mevcut ve muhtemel beklentilerini karşılayacak şekilde uygun ve ekonomik çözümler üreterek ürün ve hizmetler sunmayı,\n- Ürün/hizmet kalitemizi sürekli olarak iyileştirerek müşteri memnuniyetinin devamlılığını sağlamayı,\n- Teknolojik ve sektörel gelişmeleri yakından takip ederek süreçlerimizin daha verimli olmasını sağlamayı,\n- Kalite sistemleri çerçevesinde tüm çalışanların daha yetkin ve yeteneklerini en üst seviyede kullanabilen kişiler haline gelmeleri için ekip çalışmasına önem vererek kalite düzeyini sürekli yükseltmeyi,\n- Toplumsal ve çevresel duyarlılık, uluslararası iş birliği ve paydaşlarla güçlü ve sürekli ilişkiler geliştirme ve yenilikçi olma konularına öncelik vermeyi,\n\nTaahhüt etmekteyiz."
+  },
+  private_label: {
+    title: "Private Label",
+    content: "GK GÜMÜŞ KOZMETİK Kimya üretim faaliyetlerini sadece kendi markalarıyla değil, yurt içinde ve yurt dışında Private Label üretim yaparak tüketicinin “Kaliteli ürün” ve “Uygun Fiyat” ile ulaşmasına katkı sağlamakta ve hayatın her anındaki ihtiyaçlara yönelik ürünler geliştirmektedir.\n\nGüçlü ARGE altyapımız ve teknik ekibimiz ile sizin markanıza, marka değerinize gereken hassasiyeti gösteriyor, ürün formülünden ambalaj seçimine her türlü görsel dizaynında kalite anlayışımızdan asla ödün vermeden özveri ile çalışıyoruz. Rekabetçi fiyat politikamız ile iş ortağımıza gereken her türlü desteği sağlıyor, satış sonrası teknik destek ile de yanında oluyoruz.\n\nMüşteri odaklı çalışma sistemimiz, ulaşılabilir fiyatta hem kaliteli hem de inovatif ürün yelpazesi sunmamız, lojistik desteği ve hızlı teslimat sürelerimiz, Gümüş Kozmetik'i özel markalı ürünlerde güvenilir ve uzun süreli iş ortağınız yapan başarı faktörleri arasındadır.\n\n**Markanız Bizim İçin Değerlidir!**"
   },
   faaliyetlerimiz: {
     title: "Faaliyet Alanlarımız",
-    content: "Gümüş Kozmetik, kişisel bakım, endüstriyel kozmetik ve ortam kokulandırma alanlarında geniş bir yelpazede hizmet sunmaktadır:\n\n- **Özel Esans Tasarımları**: Markalara ve kişiye özel imza koku tasarımları oluşturuyoruz.\n- **Premium Cilt Bakım Formülleri**: Doğal özler, hyaluronik asit ve vitamin kompleksleri ile yaşlanma karşıtı ve nemlendirici serumlar üretiyoruz.\n- **Ev & Ofis Kokulandırma**: Bambu çubuklu oda kokuları ve özel sprey formülleriyle yaşam alanlarınızın atmosferini değiştiriyoruz.\n- **Toptan & Perakende Satış**: Seçkin güzellik merkezleri, kuaför salonları ve butik mağazalar için tedarik çözümleri sunuyoruz."
+    content: "Gümüş Kozmetik, kişisel bakım, endüstriyel kozmetik, özel markalı üretim (Private Label) ve ortam kokulandırma alanlarında geniş bir yelpazede hizmet sunmaktadır:\n\n- **Özel Esans Tasarımları**: Markalara ve kişiye özel imza koku tasarımları oluşturuyoruz.\n- **Premium Cilt Bakım Formülleri**: Doğal özler, hyaluronik asit ve vitamin kompleksleri ile yaşlanma karşıtı ve nemlendirici serumlar üretiyoruz.\n- **Ev & Ofis Kokulandırma**: Bambu çubuklu oda kokuları ve özel sprey formülleriyle yaşam alanlarınızın atmosferini değiştiriyoruz.\n- **Toptan & Özel Markalı Üretim**: Yurt içi ve yurt dışı markalar için fason kozmetik ve kimya üretimi (Private Label) çözümleri sunuyoruz."
   },
   yardim: {
     title: "Sıkça Sorulan Sorular",
-    content: "Soru: Siparişimi nasıl oluşturabilirim?\nCevap: Sitemizde beğendiğiniz ürünün altındaki 'WhatsApp ile Sipariş Ver' butonuna tıklayarak doğrudan destek ekibimizle görüşebilir ve siparişinizi hızlıca tamamlayabilirsiniz.\n---\nSoru: Ürünleriniz dermatolojik olarak test ediliyor mu?\nCevap: Evet, tüm kişisel bakım ve cilt bakım serilerimiz akredite laboratuvarlarda dermatolojik testlerden geçirilerek üretilir.\n---\nSoru: Kargo gönderim süresi nedir?\nCevap: Siparişleriniz onaylandıktan sonra 1-2 iş günü içerisinde kargoya teslim edilmekte ve takip numarası tarafınıza WhatsApp üzerinden iletilmektedir.\n---\nSoru: İade ve değişim politikanız nedir?\nCevap: Ambalajı açılmamış, kullanılmamış ve hasar görmemiş ürünlerimizi teslim aldığınız tarihten itibaren 14 gün içinde iade edebilirsiniz."
+    content: "Soru: Siparişimi nasıl oluşturabilirim?\nCevap: Sitemizde beğendiğiniz ürünün altındaki 'WhatsApp ile Sipariş Ver' butonuna tıklayarak doğrudan destek ekibimizle görüşebilir ve siparişinizi hızlıca tamamlayabilirsiniz.\n---\nSoru: Hayvanlar üzerinde test yapıyor musunuz?\nCevap: Hayır, MONNICA SKIN CARE olarak dünyanın hiçbir yerinde hayvanlar üzerinde test yapmıyor, doğaya ve tüm canlılara azami saygı gösteriyoruz.\n---\nSoru: Özel markalı fason (Private Label) üretim yapıyor musunuz?\nCevap: Evet, güçlü AR-GE ekibimiz ve uluslararası sertifikalı tesislerimizde kendi markanız için fason kozmetik ve kimya üretimi gerçekleştiriyor, ambalajdan formüle her adımda destek sunuyoruz.\n---\nSoru: Ürünlerinizin kalite sertifikaları nelerdir?\nCevap: Ürünlerimiz ilgili yasal yönetmeliklere, ISO Kalite Yönetim Sistemlerine ve uluslararası sağlık standartlarına uygun tesislerde yüksek kalite kontrol altında üretilmektedir."
   }
 };
 
@@ -212,8 +220,22 @@ function applyThemeSettings() {
   
   // 7. Contact Details Integration
   if (globalSettings.address) document.getElementById('contact-address-text').innerText = globalSettings.address;
-  if (globalSettings.contact_phone) document.getElementById('contact-phone-text').innerText = globalSettings.contact_phone;
-  if (globalSettings.contact_email) document.getElementById('contact-email-text').innerText = globalSettings.contact_email;
+  
+  const phoneEl = document.getElementById('contact-phone-item');
+  if (globalSettings.contact_phone && globalSettings.contact_phone.trim() !== '') {
+    document.getElementById('contact-phone-text').innerText = globalSettings.contact_phone;
+    phoneEl.style.display = 'flex';
+  } else {
+    phoneEl.style.display = 'none';
+  }
+  
+  if (globalSettings.contact_email) {
+    let emailsHtml = globalSettings.contact_email;
+    if (globalSettings.contact_email.includes('gkgumuskozmetik.com') && !globalSettings.contact_email.includes('muhasebe')) {
+      emailsHtml = `${globalSettings.contact_email}<br><span style="font-size:0.9em;color:var(--color-text-muted)">muhasebe@gkgumuskozmetik.com</span>`;
+    }
+    document.getElementById('contact-email-text').innerHTML = emailsHtml;
+  }
   
   // 8. Call To Action (WhatsApp Hooks)
   const phoneFormatted = globalSettings.whatsapp_no ? globalSettings.whatsapp_no.replace(/[^0-9]/g, '') : '905000000000';
@@ -251,14 +273,22 @@ function applyThemeSettings() {
    ========================================== */
 
 function renderTexts() {
-  // 1. Hakkımızda & Biz Kimiz
+  // 1. Hakkımızda, Vizyon, Kalite, Private Label
   if (globalNotes.hakkimizda) {
     document.getElementById('tab-hakkimizda-btn').innerText = globalNotes.hakkimizda.title || "Hakkımızda";
     document.getElementById('pane-hakkimizda').innerHTML = parseMarkdown(globalNotes.hakkimizda.content);
   }
-  if (globalNotes.biz_kimiz) {
-    document.getElementById('tab-bizkimiz-btn').innerText = globalNotes.biz_kimiz.title || "Biz Kimiz?";
-    document.getElementById('pane-bizkimiz').innerHTML = parseMarkdown(globalNotes.biz_kimiz.content);
+  if (globalNotes.vizyon_misyon) {
+    document.getElementById('tab-vizyonmisyon-btn').innerText = globalNotes.vizyon_misyon.title || "Vizyon & Misyon";
+    document.getElementById('pane-vizyonmisyon').innerHTML = parseMarkdown(globalNotes.vizyon_misyon.content);
+  }
+  if (globalNotes.kalite_politikasi) {
+    document.getElementById('tab-kalite-btn').innerText = globalNotes.kalite_politikasi.title || "Kalite Politikamız";
+    document.getElementById('pane-kalite').innerHTML = parseMarkdown(globalNotes.kalite_politikasi.content);
+  }
+  if (globalNotes.private_label) {
+    document.getElementById('tab-privatelabel-btn').innerText = globalNotes.private_label.title || "Private Label";
+    document.getElementById('pane-privatelabel').innerHTML = parseMarkdown(globalNotes.private_label.content);
   }
   
   // 2. Faaliyetlerimiz
@@ -595,23 +625,21 @@ function trackScrollActiveSection() {
    ========================================== */
 
 function initAboutTabs() {
-  const hakkimizdaBtn = document.getElementById('tab-hakkimizda-btn');
-  const bizkimizBtn = document.getElementById('tab-bizkimiz-btn');
-  const paneHakkimizda = document.getElementById('pane-hakkimizda');
-  const paneBizkimiz = document.getElementById('pane-bizkimiz');
+  const tabs = document.querySelectorAll('.about-tab-btn');
+  const panes = document.querySelectorAll('.about-pane');
   
-  hakkimizdaBtn.addEventListener('click', () => {
-    bizkimizBtn.classList.remove('active');
-    hakkimizdaBtn.classList.add('active');
-    paneBizkimiz.classList.remove('active');
-    paneHakkimizda.classList.add('active');
-  });
-  
-  bizkimizBtn.addEventListener('click', () => {
-    hakkimizdaBtn.classList.remove('active');
-    bizkimizBtn.classList.add('active');
-    paneHakkimizda.classList.remove('active');
-    paneBizkimiz.classList.add('active');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      panes.forEach(p => p.classList.remove('active'));
+      
+      tab.classList.add('active');
+      const targetId = `pane-${tab.getAttribute('data-tab')}`;
+      const targetPane = document.getElementById(targetId);
+      if (targetPane) {
+        targetPane.classList.add('active');
+      }
+    });
   });
 }
 

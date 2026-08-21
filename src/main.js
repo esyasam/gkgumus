@@ -333,10 +333,10 @@ const mockSettings = {
   hero_title: "MONNICA SKIN CARE",
   hero_subtitle: "FRESH CLEAN Every Day — Natural, Pure, Organic. İleri teknoloji ve binlerce yıllık güzellik sırları MONNICA laboratuvarlarında buluştu.",
   hero_bg_image: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&q=80&w=1600",
-  whatsapp_no: "905000000000",
+  whatsapp_no: "+90 532 206 58 50",
   instagram: "monnicaskincare",
   contact_email: "info@gkgumuskozmetik.com",
-  contact_phone: "",
+  contact_phone: "+90 532 206 58 50",
   address: "Samanlı Mah. 7. Sevinç Sok. No:17 YILDIRIM / BURSA",
   maps_embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.882194519965!2d29.123287311756578!3d40.18941057134375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca3f5e55555555%3A0x5555555555555555!2sSamanl%C4%B1%2C%207.%20Sevin%C3%A7%20Sk.%20No%3A17%2C%2016280%20Y%C4%B1ld%C4%B1r%C4%B1m%2FBursa!5e0!3m2!1str!2str!4v1715600000000!5m2!1str!2str"
 };
@@ -561,7 +561,7 @@ function applyThemeSettings() {
   }
   
   // 8. Call To Action (WhatsApp Hooks)
-  const phoneFormatted = globalSettings.whatsapp_no ? globalSettings.whatsapp_no.replace(/[^0-9]/g, '') : '905000000000';
+  const phoneFormatted = globalSettings.whatsapp_no ? globalSettings.whatsapp_no.replace(/[^0-9]/g, '') : '905322065850';
   const whatsappWelcomeText = encodeURIComponent(`Merhaba, web sitenizden ulaşıyorum. Ürünleriniz ve hizmetleriniz hakkında detaylı bilgi almak istiyorum.`);
   const whatsappUrl = `https://wa.me/${phoneFormatted}?text=${whatsappWelcomeText}`;
   
@@ -1001,7 +1001,7 @@ function openProductModal(product) {
   document.getElementById('modal-product-price').innerText = locProd.price || defaultPrice;
   
   // Configure custom WhatsApp order link
-  const phoneFormatted = globalSettings.whatsapp_no ? globalSettings.whatsapp_no.replace(/[^0-9]/g, '') : '905000000000';
+  const phoneFormatted = globalSettings.whatsapp_no ? globalSettings.whatsapp_no.replace(/[^0-9]/g, '') : '905322065850';
   
   const waMsg = activeLang === 'en'
     ? `Hello Gümüş Kozmetik, I reviewed your product "${locProd.name}" (${locProd.category}) on your website and would like to order / get more information. Thank you.`

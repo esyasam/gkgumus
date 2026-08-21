@@ -13,13 +13,16 @@
   
   /* Background & Canvas (A rich deep obsidian with a hint of warm gold) */
   --color-bg-base: #0C0C0A;       /* Ultra-deep warm charcoal */
+  --color-bg-base-rgb: 12, 12, 10;
   --color-bg-surface: rgba(22, 21, 19, 0.75); /* Translucent obsidian warm */
   --color-bg-surface-solid: #161513;
+  --color-bg-surface-solid-rgb: 22, 21, 19;
   --color-border: rgba(255, 255, 255, 0.06);
   --color-border-glow: rgba(197, 168, 128, 0.15);
   
   /* Text colors */
   --color-text-main: #F3F2EE;     /* Soft warm ivory */
+  --color-text-main-rgb: 243, 242, 238;
   --color-text-muted: #A19E95;    /* Warm stone gray */
   --color-text-dark: #1C1917;
   
@@ -48,11 +51,14 @@
 /* Light Theme Variables (Triggered dynamically by background_theme: light) */
 :root[data-theme="light"] {
   --color-bg-base: #FAF9F6;       /* Pure Warm Linen / Luxury Ivory */
+  --color-bg-base-rgb: 250, 249, 246;
   --color-bg-surface: rgba(255, 255, 255, 0.8);
   --color-bg-surface-solid: #FFFFFF;
+  --color-bg-surface-solid-rgb: 255, 255, 255;
   --color-border: rgba(0, 0, 0, 0.05);
   --color-border-glow: rgba(197, 168, 128, 0.1);
   --color-text-main: #1C1917;     /* Soft luxury dark stone */
+  --color-text-main-rgb: 28, 25, 23;
   --color-text-muted: #57534E;    /* Muted warm grey */
   --color-border-glow: rgba(197, 168, 128, 0.12);
 }
@@ -165,7 +171,7 @@ button {
   font-weight: 700;
   line-height: 1.25;
   margin-bottom: 16px;
-  background: linear-gradient(135deg, var(--color-text-main) 40%, rgba(var(--color-text-main), 0.6));
+  background: linear-gradient(135deg, var(--color-text-main) 40%, rgba(var(--color-text-main-rgb), 0.6));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -203,7 +209,7 @@ button {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(var(--color-bg-surface-solid), 0.5);
+  background: rgba(var(--color-bg-surface-solid-rgb), 0.5);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--color-border);
@@ -211,7 +217,7 @@ button {
 }
 
 .header.scrolled {
-  background: rgba(var(--color-bg-surface-solid), 0.85);
+  background: rgba(var(--color-bg-surface-solid-rgb), 0.85);
   box-shadow: var(--shadow-md);
 }
 
@@ -478,7 +484,7 @@ button {
   right: 0;
   bottom: 0;
   background: radial-gradient(circle at 80% 20%, rgba(var(--color-secondary-rgb), 0.1), transparent 50%),
-              linear-gradient(180deg, rgba(var(--color-bg-base), 0.8) 0%, rgba(var(--color-bg-base), 0.95) 100%);
+              linear-gradient(180deg, rgba(var(--color-bg-base-rgb), 0.8) 0%, rgba(var(--color-bg-base-rgb), 0.95) 100%);
   z-index: 1;
 }
 
@@ -829,7 +835,7 @@ button {
   top: 16px;
   left: 16px;
   padding: 4px 10px;
-  background: rgba(var(--color-bg-base), 0.75);
+  background: rgba(var(--color-bg-base-rgb), 0.75);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid var(--color-border);

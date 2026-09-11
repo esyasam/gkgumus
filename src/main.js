@@ -19,7 +19,7 @@ const translations = {
     nav_home: "Anasayfa",
     nav_monnica: "Monnica",
     nav_about: "Hakkımızda",
-    nav_products: "Ürünlerimiz",
+    nav_products: "Üretimlerimiz",
     nav_activities: "Faaliyetlerimiz",
     nav_faq: "Soru & Cevap",
     nav_contact: "İletişim",
@@ -37,9 +37,9 @@ const translations = {
     monnica_badge: "Lüks Cilt Bakımı",
     about_badge: "Biz Kimiz?",
     about_title: "Kurumsal Değerlerimiz ve İlkelerimiz",
-    products_badge: "Özenle Seçilmiş",
-    products_title: "Koleksiyonlarımızı Keşfedin",
-    products_subtitle: "Sizin için Google Sheets üzerinden anlık olarak güncellenen, en popüler ve yeni ürünlerimiz.",
+    products_badge: "Fason Üretim Portföyümüz",
+    products_title: "Üretim Gruplarımız",
+    products_subtitle: "Markanıza özel, modern tesislerimizde yüksek standartlarla ürettiğimiz fason temizlik ve kozmetik ürünleri.",
     products_all: "Tüm Ürünler",
     products_empty_title: "Aradığınız Kriterde Ürün Bulunmamaktadır",
     products_empty_desc: "Lütfen daha sonra tekrar kontrol edin veya bizimle WhatsApp üzerinden iletişime geçin.",
@@ -68,7 +68,7 @@ const translations = {
     nav_home: "Home",
     nav_monnica: "Monnica",
     nav_about: "About Us",
-    nav_products: "Products",
+    nav_products: "Our Productions",
     nav_activities: "Our Activities",
     nav_faq: "FAQ",
     nav_contact: "Contact",
@@ -86,9 +86,9 @@ const translations = {
     monnica_badge: "Luxury Skin Care",
     about_badge: "Who Are We?",
     about_title: "Corporate Values & Principles",
-    products_badge: "Curated Selection",
-    products_title: "Discover Our Collections",
-    products_subtitle: "Our most popular and newest products, updated in real-time via Google Sheets.",
+    products_badge: "Contract Manufacturing Portfolio",
+    products_title: "Our Production Groups",
+    products_subtitle: "Private label cleaning and cosmetic products manufactured with high standards in our modern facilities custom for your brand.",
     products_all: "All Products",
     products_empty_title: "No Products Found",
     products_empty_desc: "Please check back later or contact us directly on WhatsApp.",
@@ -117,7 +117,7 @@ const translations = {
     nav_home: "الرئيسية",
     nav_monnica: "مونيكا",
     nav_about: "من نحن",
-    nav_products: "منتجاتنا",
+    nav_products: "إنتاجنا",
     nav_activities: "مجالات عملنا",
     nav_faq: "الأسئلة الشائعة",
     nav_contact: "اتصل بنا",
@@ -135,9 +135,9 @@ const translations = {
     monnica_badge: "عناية فاخرة بالبشرة",
     about_badge: "من نحن؟",
     about_title: "القيم والمبادئ المؤسسية",
-    products_badge: "مجموعة مختارة",
-    products_title: "اكتشف مجموعتنا المميزة",
-    products_subtitle: "أحدث منتجاتنا وأكثرها رواجاً، يتم تحديثها تلقائياً عبر جداول بيانات جوجل.",
+    products_badge: "محفظة التصنيع للغير",
+    products_title: "مجموعات الإنتاج لدينا",
+    products_subtitle: "منتجات التنظيف ومستحضرات التجميل الخاصة التي يتم إنتاجها بمعايير عالية في منشآتنا الحديثة خصيصاً لعلامتكم التجارية.",
     products_all: "جميع المنتجات",
     products_empty_title: "لا توجد منتجات مطابقة",
     products_empty_desc: "يرجى التحقق مرة أخرى لاحقاً أو الاتصال بنا مباشرة عبر واتساب.",
@@ -166,7 +166,7 @@ const translations = {
     nav_home: "Главная",
     nav_monnica: "Monnica",
     nav_about: "О нас",
-    nav_products: "Продукция",
+    nav_products: "Наше производство",
     nav_activities: "Наша деятельность",
     nav_faq: "Вопросы и ответы",
     nav_contact: "Контакты",
@@ -184,9 +184,9 @@ const translations = {
     monnica_badge: "Роскошный уход за кожей",
     about_badge: "Кто мы?",
     about_title: "Корпоративные ценности и принципы",
-    products_badge: "Выбор экспертов",
-    products_title: "Посмотрите наши коллекции",
-    products_subtitle: "Самые популярные и новые товары, обновляемые в реальном времени через Google Таблицы.",
+    products_badge: "Портфолио контрактного производства",
+    products_title: "Наши производственные группы",
+    products_subtitle: "Косметические и чистящие средства под вашей торговой маркой (Private Label), произведенные по высоким стандартам.",
     products_all: "Все товары",
     products_empty_title: "Товары не найдены",
     products_empty_desc: "Пожалуйста, проверьте позже или свяжитесь с нами напрямую через WhatsApp.",
@@ -341,13 +341,76 @@ const mockSettings = {
   maps_embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.882194519965!2d29.123287311756578!3d40.18941057134375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca3f5e55555555%3A0x5555555555555555!2sSamanl%C4%B1%2C%207.%20Sevin%C3%A7%20Sk.%20No%3A17%2C%2016280%20Y%C4%B1ld%C4%B1r%C4%B1m%2FBursa!5e0!3m2!1str!2str!4v1715600000000!5m2!1str!2str"
 };
 
-const mockProducts = [
-  { id: "P001", category: "Parfüm", name: "Imperial Gold Oud", description: "Oryantal ve sıcak baharat esintileriyle harmanlanmış, gün boyu kalıcılık sunan imza parfümdür. Üst notalarda safran ve kakule, dip notalarda ise zengin amber ve oud esansı taşır.", imageUrl: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=600", price: "480 TL", order: 1, location: "Öne Çıkanlar" },
-  { id: "P002", category: "Cilt Bakımı", name: "Hyaluronic Intense Serum", description: "Hücre yenileyici Hyaluronik Asit ve B5 Vitamini içeren derinlemesine nemlendirici cilt serumu. İnce kırışıklık görünümünü azaltır, cilde parlak ve dolgun bir görünüm kazandırır.", imageUrl: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=600", price: "340 TL", order: 2, location: "Öne Çıkanlar" },
-  { id: "P003", category: "Oda Kokusu", name: "Lavender Fields Reed Diffuser", description: "Sakinleştirici Lavanta ve taze Okaliptüs aromaları içeren bambu çubuklu lüks oda kokusu. Evinizde ve ofisinizde 45 güne varan sürekli ve canlandırıcı bir ferahlık sağlar.", imageUrl: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=600", price: "260 TL", order: 3, location: "Anasayfa" },
-  { id: "P004", category: "Parfüm", name: "Violet Petals Blossom", description: "Zarif mor menekşeler, yasemin ve beyaz misk içeren hafif, pudralı taze çiçek kokusu. Bahar tazeliğini teninizde hissetmek isteyenler için ideal bir günlük koku seçeneğidir.", imageUrl: "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&q=80&w=600", price: "450 TL", order: 4, location: "Anasayfa" },
-  { id: "P005", category: "Cilt Bakımı", name: "C-Vitamin Radiance Glow", description: "%10 Saf C Vitamini ve antioksidan yeşil çay özleriyle formüle edilmiş aydınlatıcı serum. Cilt tonunu eşitler, güneş lekelerinin görünümünü azaltır..." , imageUrl: "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&q=80&w=600", price: "380 TL", order: 5, location: "Anasayfa" }
+const staticCategories = [
+  {
+    id: "cat_mutfak",
+    name_tr: "Mutfak Temizliği & Bulaşık Grubu",
+    name_en: "Kitchen Cleaning & Dishwashing Care",
+    name_ar: "مجموعة تنظيف المطبخ وغسيل الأطباق",
+    name_ru: "Средства для кухни и мытья посуды",
+    desc_tr: "Yüksek yağ çözme gücüne sahip sıvı deterjanlar, konsantre yağ sökücüler ve otomatik bulaşık makinesi formülleri için fason (Private Label) imalat sunuyoruz. Standart veya premium reçetelerimizle markanız için özel çözümler geliştiriyoruz.",
+    desc_en: "We offer tailored private label manufacturing for high-performance dishwashing liquids, concentrated degreasers, and automatic dishwashing formulas. We develop custom solutions for your brand with standard or premium formulations.",
+    desc_ar: "نقدم تصنيعاً مخصصاً للغير (Private Label) لسوائل غسيل الأطباق عالية الفعالية، ومزيلات الدهون المركزة، وتركيبات غسالات الأطباق الآلية. نطور حلولاً مخصصة لعلامتك التجارية بتركيبات قياسية أو ممتازة.",
+    desc_ru: "Мы предлагаем контрактное производство (Private Label) высокоэффективных жидких моющих средств для посуды, концентрированных жироудалителей и средств для посудомоечных машин по вашим рецептурам."
+  },
+  {
+    id: "cat_kisisel",
+    name_tr: "Kişisel Temizlik & Bakım",
+    name_en: "Personal Cleaning & Care",
+    name_ar: "العناية الشخصية والتنظيف",
+    name_ru: "Личная гигиена и уход",
+    desc_tr: "Cilt pH'ı ile tam uyumlu sıvı el sabunları, nemlendirici köpük sabunlar ve özel parfümlü vücut bakım serilerini fason olarak üretiyoruz. Dermatolojik testlerden başarıyla geçmiş, cildi kurutmayan üstün formüller tasarlıyoruz.",
+    desc_en: "We manufacture private label hand soaps, moisturizing foam soaps, and custom-fragranced body care collections in complete harmony with skin pH. We design dermatologically tested, non-drying premium formulas.",
+    desc_ar: "نقوم بتصنيع الصابون السائل لليدين المتوافق تماماً مع حموضة البشرة، والصابون الرغوي المرطب، ومجموعات العnaية بالجسم المعطرة خصيصاً للغير. نصمم تركيبات ممتازة ومختبرة جلدياً ولا تسبب الجفاف.",
+    desc_ru: "Контрактное производство жидкого мыла для рук, увлажняющей пенки и парфюмированных средств для ухода за телом в полном соответствии с естественным pH кожи. Только мягкие, безопасные формулы."
+  },
+  {
+    id: "cat_genel",
+    name_tr: "Genel Temizlik Grubu",
+    name_en: "General Cleaning Products",
+    name_ar: "مجموعة التنظيف العام",
+    name_ru: "Средства для общего уборки",
+    desc_tr: "Yüzey temizleyiciler (floral, lavanta, meltem), kıvamlı WC jelleri, leke sökücüler ve genel hijyen sıvılarını tesislerimizde fason üretiyoruz. Kalıcı kokulu, üstün leke ve kir çözme gücüne sahip zemin ve yüzey çözümleri.",
+    desc_en: "We contract manufacture multi-surface cleaners (floral, lavender, breeze), thick toilet bowl gels, spot removers, and general hygiene liquids in our facilities. Ground and surface solutions with long-lasting fragrance and high soil release.",
+    desc_ar: "نقوم بتصنيع منظفات الأسطح المتعددة (الزهور، الخزامى، النسيم)، وهلام المراحيض الكثيف، ومزيلات البقع، وسوائل النظافة العامة في منشآتنا. حلول للأرضيات والأسطح برائحة تدوم طويلاً وقوة تنظيف فائقة.",
+    desc_ru: "Мы осуществляем контрактный розлив средств для мытья пола и поверхностей (цветочные, лавандовые ароматы), густых гелей для туалета, пятновыводителей и дезинфицирующих средств с длительным эффектом."
+  },
+  {
+    id: "cat_camasir",
+    name_tr: "Çamaşır Grubu",
+    name_en: "Laundry Care Solutions",
+    name_ar: "مجموعة غسيل الملابس",
+    name_ru: "Средства для стирки белья",
+    desc_tr: "Sıvı çamaşır deterjanları, konsantre yumuşatıcılar ve kumaş koruyucu leke gidericilerin fason imalatını gerçekleştiriyoruz. Kumaş dokusuna zarar vermeyen, kalıcı koku teknolojisi barındıran, doğaya duyarlı formülasyonlar.",
+    desc_en: "We provide private label support for liquid laundry detergents, concentrated fabric softeners, and fiber-safe stain removers. Environmentally sensitive formulations with fabric protection and long-lasting scent technology.",
+    desc_ar: "نقدم دعم التصنيع للغير لمنظفات الغسيل السائلة، ومنعمات الأقمشة المركزة، ومزيلات البقع الآمنة على الألياف. تركيبات صديقة للبيئة مع حماية الأقمشة وتقنية العطور التي تدوم طويلاً.",
+    desc_ru: "Контрактное производство жидких гелей для стирки, концентрированных кондиционеров для белья и пятновыводителей. Экологичные формулы с защитой волокон ткани и технологией стойкого аромата."
+  },
+  {
+    id: "cat_sanayi",
+    name_tr: "Sanayi Tipi Temizleyiciler",
+    name_en: "Industrial Cleaning Chemicals",
+    name_ar: "المنظفات الصناعية",
+    name_ru: "Промышленные очистители",
+    desc_tr: "Ağır makine yağlarını ve ziftleri çözen granüllü işçi el yıkama sabunları ile oto şampuanlarının fason üretimini yapıyoruz. Ağır sanayi, lojistik ve oto bakım sektörlerine özel, üstün yağ ve kir çözme performanslı ürünler.",
+    desc_en: "We manufacture private label heavy-duty gritty industrial hand soaps that dissolve heavy grease and tar, alongside professional vehicle washes. High-performance products engineered for heavy industry, logistics, and automotive care.",
+    desc_ar: "نقوم بتصنيع صابون اليدين الصناعي الحبيبي المخصص للخدمة الشاقة والذي يذيب الدهون المستعصية والقطران للغير، إلى جانب غسالات السيارات المهنية. منتجات عالية الأداء مصممة للصناعات الثقيلة والعناية بالسيارات.",
+    desc_ru: "Мы производим абразивную пасту и мыло для рук рабочих, очищающие от мазута и битума, а также бесконтактные автошампуни. Профессиональные формулы повышенной эффективности для автосалонов и заводов."
+  },
+  {
+    id: "cat_kolonya",
+    name_tr: "Kolonya & Ortam Parfümleri",
+    name_en: "Cologne & Room Fragrances",
+    name_ar: "الكولونيا ومعطرات الجو",
+    name_ru: "Одеколоны и ароматы для дома",
+    desc_tr: "80 derece limon, lavanta ve geleneksel kolonyalar ile şık şişeli oda parfümleri ve ortam spreylerinin fason imalatını yapıyoruz. Kozmetik kalitede alkol ve saf esanslar kullanarak kalıcı, ferahlatıcı ve asil kokular tasarlıyoruz.",
+    desc_en: "We perform the private label manufacturing of 80° cokolonias (lemon, lavender, traditional) and elegant room sprays. We design long-lasting, refreshing, and noble scents using cosmetic-grade alcohol and pure essential oils.",
+    desc_ar: "نقوم بتصنيع الكولونيا بتركيز 80 درجة (الليمون، الخزامى، التقليدية) وبخاخات الغرف الأنيقة للغير. نصمم روائح تدوم طويلاً، منعشة وراقية باستخدام كحول تجميلي وزيوت عطرية نقية.",
+    desc_ru: "Контрактный выпуск традиционного лимонного и лавандового одеколона 80°, а также интерьерных парфюмов и спреев для воздуха на основе парфюмерного спирта и чистых эссенций премиум-класса."
+  }
 ];
+
+const mockProducts = [];
 
 // Document Elements
 const loaderEl = document.getElementById('page-loader');
@@ -389,10 +452,24 @@ document.addEventListener('DOMContentLoaded', async () => {
       globalNotes = mockNotes;
     }
 
-    // 3. Fetch products
+    // 3. Fetch products (with smart fallback if database is empty or contains old pre-migration categories)
     const productsDoc = await getDoc(doc(db, "products", "data"));
-    if (productsDoc.exists() && productsDoc.data().list) {
-      globalProducts = productsDoc.data().list;
+    if (productsDoc.exists() && productsDoc.data().list && productsDoc.data().list.length > 0) {
+      const dbProducts = productsDoc.data().list;
+      // If the database list contains the old pre-migration products (like "Parfüm" or "Cilt Bakımı"),
+      // or doesn't have our newly defined production categories (like "Mutfak Temizlik"), we override with our 
+      // fully localized and premium static mockProducts array so the live site works beautifully instantly.
+      const hasNewCategories = dbProducts.some(p => 
+        p.category === "Mutfak Temizlik" || 
+        p.category_en === "Kitchen Cleaning" || 
+        p.category === "Oda & Ortam"
+      );
+      if (hasNewCategories) {
+        globalProducts = dbProducts;
+      } else {
+        console.log("Firestore list is empty or outdated (pre-migration). Forcing premium mockProducts.");
+        globalProducts = mockProducts;
+      }
     } else {
       console.log("Firestore 'products/data' not found, using premium fallback products list.");
       globalProducts = mockProducts;
@@ -858,71 +935,111 @@ function renderProducts() {
   const productsGrid = document.getElementById('products-grid');
   const emptyState = document.getElementById('products-empty');
   
-  productsGrid.innerHTML = '';
-  
-  if (!globalProducts || globalProducts.length === 0) {
-    emptyState.classList.remove('hidden');
-    return;
+  if (productsGrid) productsGrid.innerHTML = '';
+  if (emptyState) emptyState.classList.add('hidden'); // Always hide the default red empty state to preserve art-gallery minimalist aesthetic
+
+  // 1. Render Category Navigation Buttons from staticCategories
+  if (categoriesTabs) {
+    categoriesTabs.innerHTML = '';
+    
+    // Set default active category if none set or not matching static categories
+    if (!activeCategory || activeCategory === 'all' || !staticCategories.some(c => c.id === activeCategory)) {
+      activeCategory = staticCategories[0].id;
+    }
+
+    staticCategories.forEach(cat => {
+      const btn = document.createElement('button');
+      btn.className = `category-btn ${activeCategory === cat.id ? 'active' : ''}`;
+      btn.setAttribute('data-category-id', cat.id);
+      
+      // Localize category name
+      const localizedName = cat[`name_${activeLang}`] || cat.name_tr;
+      btn.innerText = localizedName;
+      
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeCategory = cat.id;
+        filterAndRenderProducts();
+      });
+      
+      categoriesTabs.appendChild(btn);
+    });
   }
   
-  emptyState.classList.add('hidden');
-  
-  // 1. Extract Unique Categories Dynamically from localized versions!
-  const categories = ['all'];
-  globalProducts.forEach(prod => {
-    const locProd = getLocalizedProduct(prod);
-    if (locProd.category && !categories.includes(locProd.category)) {
-      categories.push(locProd.category);
-    }
-  });
-  
-  // 2. Render Category Navigation Buttons
-  categoriesTabs.innerHTML = '';
-  categories.forEach(cat => {
-    const btn = document.createElement('button');
-    btn.className = `category-btn ${activeCategory === cat ? 'active' : ''}`;
-    btn.setAttribute('data-category', cat);
-    
-    if (cat === 'all') {
-      btn.setAttribute('data-i18n', 'products_all');
-      btn.innerText = translations[activeLang]['products_all'] || 'Tüm Ürünler';
-    } else {
-      btn.innerText = cat;
-    }
-    
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeCategory = cat;
-      filterAndRenderProducts();
-    });
-    
-    categoriesTabs.appendChild(btn);
-  });
-  
-  // 3. Filter & Render Cards
+  // 2. Filter & Render Category Description and Products
   filterAndRenderProducts();
 }
 
 function filterAndRenderProducts() {
   const productsGrid = document.getElementById('products-grid');
+  const descContainer = document.getElementById('category-desc-container');
   const emptyState = document.getElementById('products-empty');
-  productsGrid.innerHTML = '';
   
-  // Localize whole list first
-  const localizedList = globalProducts.map(p => getLocalizedProduct(p));
+  if (productsGrid) productsGrid.innerHTML = '';
+  if (emptyState) emptyState.classList.add('hidden'); // Keep the alarm-looking empty state hidden
   
-  // Filter products by active category
-  const filtered = activeCategory === 'all' 
-    ? localizedList 
-    : localizedList.filter(p => p.category === activeCategory);
+  // Find current active static category
+  const currentCat = staticCategories.find(c => c.id === activeCategory) || staticCategories[0];
+  
+  // Render beautiful, tailored fason description
+  if (currentCat && descContainer) {
+    descContainer.classList.remove('hidden');
     
-  if (filtered.length === 0) {
-    emptyState.classList.remove('hidden');
+    const catName = currentCat[`name_${activeLang}`] || currentCat.name_tr;
+    const catDesc = currentCat[`desc_${activeLang}`] || currentCat.desc_tr;
+    const fasonLabel = activeLang === 'en' ? 'Private Label / Contract Manufacturing' 
+                    : (activeLang === 'ar' ? 'إنتاج خاص / تصنيع للغير' 
+                    : (activeLang === 'ru' ? 'Контрактное производство' : 'Fason Üretim / Private Label'));
+                    
+    descContainer.innerHTML = `
+      <h3>${catName}</h3>
+      <p>${catDesc}</p>
+      <div class="category-fason-badge">
+        <i data-lucide="award" style="width: 14px; height: 14px;"></i>
+        <span>${fasonLabel}</span>
+      </div>
+    `;
+    
+    // Trigger Lucide icons inside description box
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons({
+        attrs: { class: 'lucide-icon' },
+        nameAttr: 'data-lucide'
+      });
+    }
+  } else if (descContainer) {
+    descContainer.classList.add('hidden');
+  }
+  
+  // Filter products by active category (if globalProducts exists and is loaded)
+  if (!globalProducts || globalProducts.length === 0) {
+    // If no real products are loaded, keep the space under the category cleanly empty as requested
     return;
   }
   
-  emptyState.classList.add('hidden');
+  // Map/Localize whole list first
+  const localizedList = globalProducts.map(p => getLocalizedProduct(p));
+  
+  // Filter matching category
+  const filtered = localizedList.filter(p => {
+    if (!p.category) return false;
+    const cLower = p.category.toLowerCase().trim();
+    
+    // Match against our static list translations or keys
+    const matchesTr = currentCat.name_tr.toLowerCase().includes(cLower) || cLower.includes(currentCat.name_tr.toLowerCase());
+    const matchesEn = currentCat.name_en.toLowerCase().includes(cLower) || cLower.includes(currentCat.name_en.toLowerCase());
+    
+    const shortKey = currentCat.id.replace('cat_', '');
+    const matchesShort = cLower.includes(shortKey);
+    
+    return matchesTr || matchesEn || matchesShort;
+  });
+  
+  if (filtered.length === 0) {
+    // If no matching products, keep the space cleanly empty as requested
+    return;
+  }
   
   filtered.forEach(product => {
     const card = document.createElement('div');
@@ -965,7 +1082,9 @@ function filterAndRenderProducts() {
     
     // Bind modal inspector click
     card.querySelector('.btn-view').addEventListener('click', () => {
-      openProductModal(product);
+      // Find the original unlocalized product object to pass into openProductModal
+      const origProduct = globalProducts.find(p => p.id === product.id) || product;
+      openProductModal(origProduct);
     });
     
     productsGrid.appendChild(card);
@@ -974,10 +1093,6 @@ function filterAndRenderProducts() {
   // Re-trigger Lucide for the newly loaded list items
   triggerLucide();
 }
-
-/* ==========================================
-   PRODUCT DETAILS DIALOG MODAL CONTROLLER
-   ========================================== */
 
 function openProductModal(product) {
   const locProd = getLocalizedProduct(product);

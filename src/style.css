@@ -4,63 +4,67 @@
 
 /* 1. CSS VARIABLES & SYSTEM TOKENS */
 :root {
-  /* Default Luxury Minimalist Theme (Elegant Warm Gold / Soft Taupe) */
-  --color-primary: #C5A880;       /* Refined Champagne Gold */
-  --color-primary-rgb: 197, 168, 128;
-  --color-secondary: #9C866B;     /* Warm Sand/Taupe */
-  --color-secondary-rgb: 156, 134, 107;
-  --color-accent: #D4AF37;        /* Pure Gold Accent */
+  /* Ultra-Premium White & Green Minimalist Theme */
+  --color-primary: #1E3F2E;       /* Deep Forest Green */
+  --color-primary-rgb: 30, 63, 46;
+  --color-secondary: #5C8271;     /* Elegant Sage Green */
+  --color-secondary-rgb: 92, 130, 113;
+  --color-accent: #8FA89B;        /* Delicate Silver Sage Accent */
   
-  /* Background & Canvas (A rich deep obsidian with a hint of warm gold) */
-  --color-bg-base: #0C0C0A;       /* Ultra-deep warm charcoal */
-  --color-bg-base-rgb: 12, 12, 10;
-  --color-bg-surface: rgba(22, 21, 19, 0.75); /* Translucent obsidian warm */
-  --color-bg-surface-solid: #161513;
-  --color-bg-surface-solid-rgb: 22, 21, 19;
-  --color-border: rgba(255, 255, 255, 0.06);
-  --color-border-glow: rgba(197, 168, 128, 0.15);
+  /* Clean Canvas (Art Gallery White / Linen) */
+  --color-bg-base: #FFFFFF;       /* Pure Crisp White Background */
+  --color-bg-base-rgb: 255, 255, 255;
+  --color-bg-surface: rgba(246, 248, 246, 0.7); /* Translucent soft linen mint */
+  --color-bg-surface-solid: #F6F8F6;
+  --color-bg-surface-solid-rgb: 246, 248, 246;
+  --color-border: rgba(30, 63, 46, 0.08); /* Clean, ultra-fine forest-border */
+  --color-border-glow: rgba(30, 63, 46, 0.04);
   
   /* Text colors */
-  --color-text-main: #F3F2EE;     /* Soft warm ivory */
-  --color-text-main-rgb: 243, 242, 238;
-  --color-text-muted: #A19E95;    /* Warm stone gray */
-  --color-text-dark: #1C1917;
+  --color-text-main: #18221E;     /* Deep forest black */
+  --color-text-main-rgb: 24, 34, 30;
+  --color-text-muted: #53605C;    /* Sophisticated muted olive gray */
+  --color-text-dark: #18221E;
   
   /* Typography */
   --font-sans: 'Outfit', sans-serif;
   --font-serif: 'Playfair Display', serif;
   
   /* Transitions */
-  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
   
-  /* Corner Radii (Slightly sharper corners feel more structural/premium) */
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 18px;
+  /* Corner Radii (Extremely sharp/minimal for high-end feel) */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
   --radius-full: 9999px;
   
-  /* Shadow & Glows */
-  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 25px rgba(197, 168, 128, 0.15);
+  /* Shadow & Glows (Sade, minimal, clean - almost no shadow, only fine borders) */
+  --shadow-sm: 0 2px 8px rgba(30, 63, 46, 0.02);
+  --shadow-md: 0 4px 16px rgba(30, 63, 46, 0.04);
+  --shadow-lg: 0 8px 24px rgba(30, 63, 46, 0.06);
+  --shadow-glow: none;
 }
 
-/* Light Theme Variables (Triggered dynamically by background_theme: light) */
+/* Light Theme Variables (Triggered dynamically, behaves identically for absolute consistency) */
 :root[data-theme="light"] {
-  --color-bg-base: #FAF9F6;       /* Pure Warm Linen / Luxury Ivory */
-  --color-bg-base-rgb: 250, 249, 246;
-  --color-bg-surface: rgba(255, 255, 255, 0.8);
-  --color-bg-surface-solid: #FFFFFF;
-  --color-bg-surface-solid-rgb: 255, 255, 255;
-  --color-border: rgba(0, 0, 0, 0.05);
-  --color-border-glow: rgba(197, 168, 128, 0.1);
-  --color-text-main: #1C1917;     /* Soft luxury dark stone */
-  --color-text-main-rgb: 28, 25, 23;
-  --color-text-muted: #57534E;    /* Muted warm grey */
-  --color-border-glow: rgba(197, 168, 128, 0.12);
+  --color-primary: #1E3F2E;
+  --color-primary-rgb: 30, 63, 46;
+  --color-secondary: #5C8271;
+  --color-secondary-rgb: 92, 130, 113;
+  --color-accent: #8FA89B;
+  --color-bg-base: #FFFFFF;
+  --color-bg-base-rgb: 255, 255, 255;
+  --color-bg-surface: rgba(246, 248, 246, 0.7);
+  --color-bg-surface-solid: #F6F8F6;
+  --color-bg-surface-solid-rgb: 246, 248, 246;
+  --color-border: rgba(30, 63, 46, 0.08);
+  --color-border-glow: rgba(30, 63, 46, 0.04);
+  --color-text-main: #18221E;
+  --color-text-main-rgb: 24, 34, 30;
+  --color-text-muted: #53605C;
 }
 
 /* 2. BASE RESET & BODY */
@@ -171,9 +175,7 @@ button {
   font-weight: 700;
   line-height: 1.25;
   margin-bottom: 16px;
-  background: linear-gradient(135deg, var(--color-text-main) 40%, rgba(var(--color-text-main-rgb), 0.6));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-primary);
 }
 
 .section-subtitle {
@@ -510,16 +512,8 @@ button {
   font-weight: 700;
   line-height: 1.15;
   margin-bottom: 24px;
-  background: linear-gradient(135deg, #FFFFFF 10%, #FFFFFF 60%, rgba(255, 255, 255, 0.7));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-primary);
   animation: slideUpFade 1s var(--transition-slow);
-}
-
-:root[data-theme="light"] .hero-title {
-  background: linear-gradient(135deg, #111827 60%, #4B5563);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .hero-subtitle {
@@ -763,27 +757,69 @@ button {
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .category-btn {
   padding: 10px 24px;
   border-radius: var(--radius-full);
-  background: var(--color-bg-surface);
+  background: var(--color-bg-surface-solid);
   border: 1px solid var(--color-border);
   color: var(--color-text-muted);
   font-weight: 600;
   font-size: 0.9rem;
   transition: all var(--transition-fast);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 }
 
 .category-btn:hover, .category-btn.active {
   background: var(--color-primary);
   color: var(--color-bg-base);
   border-color: var(--color-primary);
-  box-shadow: 0 4px 12px rgba(var(--color-primary-rgb), 0.15);
+}
+
+/* Elegant Category Description Showcase (Minimalist Artist Vibe) */
+.category-description-box {
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  padding: 40px 30px;
+  background: var(--color-bg-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  animation: fadeIn 0.4s var(--transition-normal);
+  position: relative;
+}
+
+.category-description-box h3 {
+  font-family: var(--font-serif);
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+
+.category-description-box p {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.category-fason-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(30, 63, 46, 0.04);
+  border: 1px solid rgba(30, 63, 46, 0.1);
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .products-grid {

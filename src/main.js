@@ -351,7 +351,55 @@ const staticCategories = [
     desc_tr: "Yüksek yağ çözme gücüne sahip sıvı deterjanlar, konsantre yağ sökücüler ve otomatik bulaşık makinesi formülleri için fason (Private Label) imalat sunuyoruz. Standart veya premium reçetelerimizle markanız için özel çözümler geliştiriyoruz.",
     desc_en: "We offer tailored private label manufacturing for high-performance dishwashing liquids, concentrated degreasers, and automatic dishwashing formulas. We develop custom solutions for your brand with standard or premium formulations.",
     desc_ar: "نقدم تصنيعاً مخصصاً للغير (Private Label) لسوائل غسيل الأطباق عالية الفعالية، ومزيلات الدهون المركزة، وتركيبات غسالات الأطباق الآلية. نطور حلولاً مخصصة لعلامتك التجارية بتركيبات قياسية أو ممتازة.",
-    desc_ru: "Мы предлагаем контрактное производство (Private Label) высокоэффективных жидких моющих средств для посуды, концентрированных жироудалителей и средств для посудомоечных машин по вашим рецептурам."
+    desc_ru: "Мы предлагаем контрактное производство (Private Label) высокоэффективных жидких моющих средств для посуды, концентрированных жироудалителей и средств для посудомоечных машин по вашим рецептурам.",
+    items_tr: [
+      "Standart Sıvı Bulaşık Deterjanı",
+      "Extra Sıvı Bulaşık Deterjanı",
+      "Süper Sıvı Bulaşık Deterjanı",
+      "Kıvamlı Yağ Sökücü",
+      "Yağ ve Karbon Sökücü",
+      "Bulaşık Makinesi Deterjanı",
+      "Bulaşık Makinesi Parlatıcısı",
+      "Profesyonel Bulaşık Makinesi Deterjanı",
+      "Profesyonel Bulaşık Makinesi Parlatıcısı",
+      "Mineralli Genel Temizleyici (Cif Tipi)"
+    ],
+    items_en: [
+      "Standard Liquid Dishwashing Soap",
+      "Extra Liquid Dishwashing Soap",
+      "Super Liquid Dishwashing Soap",
+      "Thick Gel Degreaser",
+      "Grease & Carbon Remover",
+      "Automatic Dishwasher Detergent",
+      "Dishwasher Rinse Aid",
+      "Professional Dishwasher Detergent",
+      "Professional Dishwasher Rinse Aid",
+      "Mineral Multi-Surface Cream Cleaner"
+    ],
+    items_ar: [
+      "سائل غسيل الأطباق القياسي",
+      "سائل غسيل الأطباق الإضافي",
+      "سائل غسيل الأطباق الفائق",
+      "مزيل الدهون الكثيف",
+      "مزيل الدهون والكربون",
+      "منظف غسالة الأطباق الآلية",
+      "مساعد شطف غسالة الأطباق",
+      "منظف غسالة الأطباق المهني",
+      "مساعد شطف غسالة الأطباق المهني",
+      "منظف عام بالمعادن (نوع سيف)"
+    ],
+    items_ru: [
+      "Стандартное жидкое средство для посуды",
+      "Жидкое средство для посуды Extra",
+      "Жидкое средство для посуды Super",
+      "Густой гелевый жироудалитель",
+      "Очиститель от нагара и сажи (антижир)",
+      "Средство для посудомоечных машин",
+      "Ополаскиватель для посудомоечных машин",
+      "Профессиональное средство для посудомоечных машин",
+      "Профессиональный ополаскиватель для посудомоечных машин",
+      "Минеральный очищающий крем (типа Cif)"
+    ]
   },
   {
     id: "cat_kisisel",
@@ -361,8 +409,36 @@ const staticCategories = [
     name_ru: "Личная гигиена и уход",
     desc_tr: "Cilt pH'ı ile tam uyumlu sıvı el sabunları, nemlendirici köpük sabunlar ve özel parfümlü vücut bakım serilerini fason olarak üretiyoruz. Dermatolojik testlerden başarıyla geçmiş, cildi kurutmayan üstün formüller tasarlıyoruz.",
     desc_en: "We manufacture private label hand soaps, moisturizing foam soaps, and custom-fragranced body care collections in complete harmony with skin pH. We design dermatologically tested, non-drying premium formulas.",
-    desc_ar: "نقوم بتصنيع الصابون السائل لليدين المتوافق تماماً مع حموضة البشرة، والصابون الرغوي المرطب، ومجموعات العnaية بالجسم المعطرة خصيصاً للغير. نصمم تركيبات ممتازة ومختبرة جلدياً ولا تسبب الجفاف.",
-    desc_ru: "Контрактное производство жидкого мыла для рук, увлажняющей пенки и парфюмированных средств для ухода за телом в полном соответствии с естественным pH кожи. Только мягкие, безопасные формулы."
+    desc_ar: "نقوم بتصنيع الصابون السائل لليدين المتوافق تماماً مع حموضة البشرة، والصابون الرغوي المرطب، ومجموعات العناية بالجسم المعطرة خصيصاً للغير. نصمم تركيبات ممتازة ومختبرة جلدياً ولا تسبب الجفاف.",
+    desc_ru: "Контрактное производство жидкого мыла для рук, увлажняющей пенки и парфюмированных средств для ухода за телом в полном соответствии с естественным pH кожи. Только мягкие, безопасные формулы.",
+    items_tr: [
+      "Pembe Çiçek Kokulu Sıvı Sabun",
+      "Beyaz Çiçek Kokulu Sıvı Sabun",
+      "Mor Lavanta Kokulu Sıvı Sabun",
+      "Mavi Okyanus Kokulu Sıvı Sabun",
+      "Nemlendirici Köpük Sabun"
+    ],
+    items_en: [
+      "Pink Flower Liquid Hand Soap",
+      "White Flower Liquid Hand Soap",
+      "Purple Lavender Liquid Hand Soap",
+      "Blue Ocean Liquid Hand Soap",
+      "Moisturizing Foam Hand Soap"
+    ],
+    items_ar: [
+      "صابون سائل لليدين برائحة الزهور الوردية",
+      "صابون سائل لليدين برائحة الزهور البيضاء",
+      "صابون سائل لليدين برائحة الخزامى الأرجوانية",
+      "صابون سائل لليدين برائحة المحيط الأزرق",
+      "صابون رغوي مرطب لليدين"
+    ],
+    items_ru: [
+      "Жидкое мыло «Розовый цветок»",
+      "Жидкое мыло «Белый цветок»",
+      "Жидкое мыло «Фиолетовая лаванда»",
+      "Жидкое мыло «Синий океан»",
+      "Увлажняющее мыло-пенка"
+    ]
   },
   {
     id: "cat_genel",
@@ -373,7 +449,63 @@ const staticCategories = [
     desc_tr: "Yüzey temizleyiciler (floral, lavanta, meltem), kıvamlı WC jelleri, leke sökücüler ve genel hijyen sıvılarını tesislerimizde fason üretiyoruz. Kalıcı kokulu, üstün leke ve kir çözme gücüne sahip zemin ve yüzey çözümleri.",
     desc_en: "We contract manufacture multi-surface cleaners (floral, lavender, breeze), thick toilet bowl gels, spot removers, and general hygiene liquids in our facilities. Ground and surface solutions with long-lasting fragrance and high soil release.",
     desc_ar: "نقوم بتصنيع منظفات الأسطح المتعددة (الزهور، الخزامى، النسيم)، وهلام المراحيض الكثيف، ومزيلات البقع، وسوائل النظافة العامة في منشآتنا. حلول للأرضيات والأسطح برائحة تدوم طويلاً وقوة تنظيف فائقة.",
-    desc_ru: "Мы осуществляем контрактный розлив средств для мытья пола и поверхностей (цветочные, лавандовые ароматы), густых гелей для туалета, пятновыводителей и дезинфицирующих средств с длительным эффектом."
+    desc_ru: "Мы осуществляем контрактный розлив средств для мытья пола и поверхностей (цветочные, лавандовые ароматы), густых гелей для туалета, пятновыводителей и дезинфицирующих средств с длительным эффектом.",
+    items_tr: [
+      "Sıvı WC Banyo Temizleyicisi",
+      "Kıvamlı WC Banyo Temizleyicisi",
+      "Sıvı Çamaşır Suyu",
+      "Kıvamlı Çamaşır Suyu",
+      "Çiçek Kokulu Yüzey Temizleyici",
+      "Meltem Esintili Yüzey Temizleyici",
+      "Lavanta Kokulu Yüzey Temizleyici",
+      "Yoğun Kireç Sökücü",
+      "Bulaşık Makinesi Kireç Sökücü",
+      "Camsil Cam Temizleyici",
+      "Günlük Kullanım Otomat Makinesi Deterjanı",
+      "Ağır Kirler İçin Otomat Makinesi Deterjanı"
+    ],
+    items_en: [
+      "Liquid Toilet & Bathroom Cleaner",
+      "Thick Gel Toilet & Bathroom Cleaner",
+      "Liquid Bleach",
+      "Thick Gel Bleach",
+      "Floral Multi-Surface Cleaner",
+      "Ocean Breeze Multi-Surface Cleaner",
+      "Lavender Multi-Surface Cleaner",
+      "Strong Limescale Remover",
+      "Dishwasher Limescale Descaler",
+      "Glass & Window Spray",
+      "Daily Use Automatic Scrubber Detergent",
+      "Heavy Duty Automatic Scrubber Detergent"
+    ],
+    items_ar: [
+      "منظف المراحيض والحمامات السائل",
+      "هلام منظف المراحيض والحمامات الكثيف",
+      "مبيض الغسيل السائل",
+      "مبيض الغسيل الكثيف",
+      "منظف الأسطح برائحة الزهور",
+      "منظف الأسطح بنسيم المحيط",
+      "منظف الأسطح برائحة الخزامى",
+      "مزيل الترسبات الكلسية القوي",
+      "مزيل الترسبات لغسالات الأطباق",
+      "بخاخ تنظيف الزجاج والنوافذ",
+      "منظف آلات غسيل الأرضيات اليومي",
+      "منظف آلات الأرضيات للخدمة الشاقة"
+    ],
+    items_ru: [
+      "Жидкое средство для туалета и ванной",
+      "Густой гель для чистки унитаза и ванной",
+      "Жидкий отбеливатель (белизна)",
+      "Густой гель-отбеливатель",
+      "Средство для мытья полов «Цветочный аромат»",
+      "Средство для мытья полов «Морской бриз»",
+      "Средство для мытья полов «Лаванда»",
+      "Мощный очиститель от накипи и известкового налета",
+      "Очиститель накипи для посудомоечных машин",
+      "Спрей-очиститель для стекол и окон",
+      "Средство для поломоечных машин (ежедневное)",
+      "Средство для поломоечных машин (усиленное)"
+    ]
   },
   {
     id: "cat_camasir",
@@ -384,7 +516,31 @@ const staticCategories = [
     desc_tr: "Sıvı çamaşır deterjanları, konsantre yumuşatıcılar ve kumaş koruyucu leke gidericilerin fason imalatını gerçekleştiriyoruz. Kumaş dokusuna zarar vermeyen, kalıcı koku teknolojisi barındıran, doğaya duyarlı formülasyonlar.",
     desc_en: "We provide private label support for liquid laundry detergents, concentrated fabric softeners, and fiber-safe stain removers. Environmentally sensitive formulations with fabric protection and long-lasting scent technology.",
     desc_ar: "نقدم دعم التصنيع للغير لمنظفات الغسيل السائلة، ومنعمات الأقمشة المركزة، ومزيلات البقع الآمنة على الألياف. تركيبات صديقة للبيئة مع حماية الأقمشة وتقنية العطور التي تدوم طويلاً.",
-    desc_ru: "Контрактное производство жидких гелей для стирки, концентрированных кондиционеров для белья и пятновыводителей. Экологичные формулы с защитой волокон ткани и технологией стойкого аромата."
+    desc_ru: "Контрактное производство жидких гелей для стирки, концентрированных кондиционеров для белья и пятновыводителей. Экологичные формулы с защитой волокон ткани и технологией стойкого аромата.",
+    items_tr: [
+      "Sıvı Çamaşır Deterjanı",
+      "Aspiriks Genel Amaçlı Leke Temizleyici",
+      "White Soft Çamaşır Yumuşatıcısı",
+      "Konsantre Yağ ve Leke Sökücü"
+    ],
+    items_en: [
+      "Liquid Laundry Detergent",
+      "Aspiriks Multi-Purpose Spot Cleaner",
+      "White Soft Fabric Softener",
+      "Concentrated Grease & Stain Remover"
+    ],
+    items_ar: [
+      "منظف الغسيل السائل",
+      "منظف البقع متعدد الاستخدامات أسبريكس",
+      "منعم الملابس وايت سوفت",
+      "مزيل الدهون والبقع المركّز"
+    ],
+    items_ru: [
+      "Жидкий гель для стирки белья",
+      "Универсальный пятновыводитель Aspiriks",
+      "Кондиционер для белья White Soft",
+      "Концентрированный пятно- и жироудалитель"
+    ]
   },
   {
     id: "cat_sanayi",
@@ -395,7 +551,27 @@ const staticCategories = [
     desc_tr: "Ağır makine yağlarını ve ziftleri çözen granüllü işçi el yıkama sabunları ile oto şampuanlarının fason üretimini yapıyoruz. Ağır sanayi, lojistik ve oto bakım sektörlerine özel, üstün yağ ve kir çözme performanslı ürünler.",
     desc_en: "We manufacture private label heavy-duty gritty industrial hand soaps that dissolve heavy grease and tar, alongside professional vehicle washes. High-performance products engineered for heavy industry, logistics, and automotive care.",
     desc_ar: "نقوم بتصنيع صابون اليدين الصناعي الحبيبي المخصص للخدمة الشاقة والذي يذيب الدهون المستعصية والقطران للغير، إلى جانب غسالات السيارات المهنية. منتجات عالية الأداء مصممة للصناعات الثقيلة والعناية بالسيارات.",
-    desc_ru: "Мы производим абразивную пасту и мыло для рук рабочих, очищающие от мазута и битума, а также бесконтактные автошампуни. Профессиональные формулы повышенной эффективности для автосалонов и заводов."
+    desc_ru: "Мы производим абразивную пасту и мыло для рук рабочих, очищающие от мазута и битума, а также бесконтактные автошампуни. Профессиональные формулы повышенной эффективности для автосалонов и заводов.",
+    items_tr: [
+      "Granüllü İşçi El Yıkama Sabunu",
+      "Fırçasız Oto Şampuanı",
+      "Fırçalı Oto Şampuanı"
+    ],
+    items_en: [
+      "Gritty Industrial Hand Washing Paste",
+      "Brushless Professional Car Wash",
+      "Active Foam Car Wash Shampoo"
+    ],
+    items_ar: [
+      "معجون صابون اليدين الحبيبي للعمال",
+      "شامبو غسيل السيارات بدون فرك",
+      "شامبو غسيل السيارات بالرغوة النشطة"
+    ],
+    items_ru: [
+      "Абразивная паста для рук рабочих (с гранулами)",
+      "Бесконтактный автошампунь",
+      "Автошампунь для ручной мойки (активная пена)"
+    ]
   },
   {
     id: "cat_kolonya",
@@ -406,7 +582,39 @@ const staticCategories = [
     desc_tr: "80 derece limon, lavanta ve geleneksel kolonyalar ile şık şişeli oda parfümleri ve ortam spreylerinin fason imalatını yapıyoruz. Kozmetik kalitede alkol ve saf esanslar kullanarak kalıcı, ferahlatıcı ve asil kokular tasarlıyoruz.",
     desc_en: "We perform the private label manufacturing of 80° cokolonias (lemon, lavender, traditional) and elegant room sprays. We design long-lasting, refreshing, and noble scents using cosmetic-grade alcohol and pure essential oils.",
     desc_ar: "نقوم بتصنيع الكولونيا بتركيز 80 درجة (الليمون، الخزامى، التقليدية) وبخاخات الغرف الأنيقة للغير. نصمم روائح تدوم طويلاً، منعشة وراقية باستخدام كحول تجميلي وزيوت عطرية نقية.",
-    desc_ru: "Контрактный выпуск традиционного лимонного и лавандового одеколона 80°, а также интерьерных парфюмов и спреев для воздуха на основе парфюмерного спирта и чистых эссенций премиум-класса."
+    desc_ru: "Контрактный выпуск традиционного лимонного и лавандового одеколона 80°, а также интерьерных парфюмов и спреев для воздуха на основе парфюмерного спирта и чистых эссенций премиум-класса.",
+    items_tr: [
+      "80 Derece Limon Kolonyası",
+      "80 Derece Lavanta Kolonyası",
+      "80 Derece Beyaz Çiçek Kolonyası",
+      "Karçiçeği Oda Parfümü",
+      "Comfort Oda Parfümü",
+      "Powder Oda Parfümü"
+    ],
+    items_en: [
+      "80° Lemon Cologne",
+      "80° Lavender Cologne",
+      "80° White Flower Cologne",
+      "Snowflower Room Spray",
+      "Comfort Room Spray",
+      "Powder Room Spray"
+    ],
+    items_ar: [
+      "كولونيا الليمون 80 درجة",
+      "كولونيا الخزامى 80 درجة",
+      "كولونيا الزهور البيضاء 80 درجة",
+      "معطر الجو برائحة زهرة الثلج",
+      "معطر الجو كومفورت",
+      "معطر الجو بودرة"
+    ],
+    items_ru: [
+      "Лимонный одеколон 80°",
+      "Лавандовый одеколон 80°",
+      "Одеколон «Белые цветы» 80°",
+      "Парфюм для дома «Подснежник»",
+      "Парфюм для дома Comfort",
+      "Парфюм для дома Powder"
+    ]
   }
 ];
 
@@ -992,6 +1200,34 @@ function filterAndRenderProducts() {
                     : (activeLang === 'ar' ? 'إنتاج خاص / تصنيع للغير' 
                     : (activeLang === 'ru' ? 'Контрактное производство' : 'Fason Üretim / Private Label'));
                     
+    // Construct items list HTML dynamically
+    const itemsKey = `items_${activeLang}`;
+    const itemsList = currentCat[itemsKey] || currentCat.items_tr || [];
+    let itemsHtml = '';
+    
+    if (itemsList.length > 0) {
+      const listTitle = activeLang === 'en' ? 'Our Production Range' 
+                      : (activeLang === 'ar' ? 'تشكيلة إنتاجنا' 
+                      : (activeLang === 'ru' ? 'Ассортимент продукции' : 'Üretim Çeşitlerimiz'));
+                      
+      itemsHtml = `
+        <div class="category-items-section">
+          <h4>
+            <i data-lucide="layers" style="width: 16px; height: 16px;"></i>
+            <span>${listTitle}</span>
+          </h4>
+          <ul class="category-items-list">
+            ${itemsList.map(item => `
+              <li>
+                <i data-lucide="check" style="width: 14px; height: 14px; color: var(--color-primary); flex-shrink: 0;"></i>
+                <span>${item}</span>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+      `;
+    }
+                    
     descContainer.innerHTML = `
       <h3>${catName}</h3>
       <p>${catDesc}</p>
@@ -999,6 +1235,7 @@ function filterAndRenderProducts() {
         <i data-lucide="award" style="width: 14px; height: 14px;"></i>
         <span>${fasonLabel}</span>
       </div>
+      ${itemsHtml}
     `;
     
     // Trigger Lucide icons inside description box
@@ -1082,7 +1319,6 @@ function filterAndRenderProducts() {
     
     // Bind modal inspector click
     card.querySelector('.btn-view').addEventListener('click', () => {
-      // Find the original unlocalized product object to pass into openProductModal
       const origProduct = globalProducts.find(p => p.id === product.id) || product;
       openProductModal(origProduct);
     });

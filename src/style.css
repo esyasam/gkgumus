@@ -3,68 +3,72 @@
    ========================================== */
 
 /* 1. CSS VARIABLES & SYSTEM TOKENS */
+/* 1. CSS VARIABLES & SYSTEM TOKENS */
 :root {
-  /* Ultra-Premium Modern Bright Theme */
-  --color-primary: #0F382C;       /* Deep Forest Emerald */
-  --color-primary-rgb: 15, 56, 44;
-  --color-secondary: #C5A880;     /* Luxury Champagne Gold */
-  --color-secondary-rgb: 197, 168, 128;
-  --color-accent: #D4AF37;        /* Metallic Gold Accent */
+  /* AI & Tech-Modern Minimalist Palette */
+  --color-primary: #062C22;       /* Deep Forest Dark Green */
+  --color-primary-rgb: 6, 44, 34;
+  --color-secondary: #10B981;     /* Electric Acid Green */
+  --color-secondary-rgb: 16, 185, 129;
+  --color-accent: #06B6D4;        /* Tech Cyber Turquoise */
+  --color-accent-rgb: 6, 182, 212;
   
-  /* Bright Luminous Canvas */
-  --color-bg-base: #FAFAF8;       /* Warm Pearl Linen White Background */
-  --color-bg-base-rgb: 250, 250, 248;
-  --color-bg-surface: #FFFFFF;    /* Pure Crisp White Surface */
+  /* Luminous White Canvas */
+  --color-bg-base: #FFFFFF;       /* Pure Crisp White Background */
+  --color-bg-base-rgb: 255, 255, 255;
+  --color-bg-alt: #F4F8F6;        /* Subtle Mint-Tinted Soft White Surface */
+  --color-bg-surface: #FFFFFF;    /* Pure White Card Surface */
   --color-bg-surface-solid: #FFFFFF;
   --color-bg-surface-solid-rgb: 255, 255, 255;
-  --color-border: rgba(15, 56, 44, 0.08); /* Fine crisp border */
-  --color-border-glow: rgba(197, 168, 128, 0.25);
+  --color-border: rgba(6, 44, 34, 0.08); /* Crisp subtle border */
+  --color-border-glow: rgba(16, 185, 129, 0.3);
   
-  /* Text colors */
-  --color-text-main: #111827;     /* Deep Slate / Charcoal */
-  --color-text-main-rgb: 17, 24, 39;
-  --color-text-muted: #4B5563;    /* Refined Muted Gray */
-  --color-text-dark: #111827;
+  /* High Contrast Typography */
+  --color-text-main: #0F172A;     /* Deep Slate / Charcoal Black */
+  --color-text-main-rgb: 15, 23, 42;
+  --color-text-muted: #475569;    /* Clean Muted Slate */
+  --color-text-dark: #0F172A;
   
   /* Typography */
-  --font-sans: 'Outfit', sans-serif;
-  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
   
-  /* Transitions */
-  --transition-fast: 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
-  --transition-normal: 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-  --transition-slow: 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  /* Fast Instant Transitions */
+  --transition-fast: 0.12s ease;
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   
   /* Corner Radii */
   --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
   --radius-full: 9999px;
   
-  /* Soft Modern Shadows & Glows */
-  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.03);
-  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 16px 45px rgba(0, 0, 0, 0.08);
-  --shadow-glow: 0 0 25px rgba(197, 168, 128, 0.2);
+  /* Crisp Modern Flat Shadows */
+  --shadow-sm: 0 1px 3px rgba(6, 44, 34, 0.04);
+  --shadow-md: 0 6px 20px rgba(6, 44, 34, 0.06);
+  --shadow-lg: 0 12px 35px rgba(6, 44, 34, 0.09);
+  --shadow-glow: 0 0 20px rgba(16, 185, 129, 0.25);
 }
 
-/* Light Theme Variables */
+/* Light Theme Sync */
 :root[data-theme="light"] {
-  --color-primary: #0F382C;
-  --color-primary-rgb: 15, 56, 44;
-  --color-secondary: #C5A880;
-  --color-secondary-rgb: 197, 168, 128;
-  --color-accent: #D4AF37;
-  --color-bg-base: #FAFAF8;
-  --color-bg-base-rgb: 250, 250, 248;
+  --color-primary: #062C22;
+  --color-primary-rgb: 6, 44, 34;
+  --color-secondary: #10B981;
+  --color-secondary-rgb: 16, 185, 129;
+  --color-accent: #06B6D4;
+  --color-bg-base: #FFFFFF;
+  --color-bg-base-rgb: 255, 255, 255;
+  --color-bg-alt: #F4F8F6;
   --color-bg-surface: #FFFFFF;
   --color-bg-surface-solid: #FFFFFF;
   --color-bg-surface-solid-rgb: 255, 255, 255;
-  --color-border: rgba(15, 56, 44, 0.08);
-  --color-border-glow: rgba(197, 168, 128, 0.25);
-  --color-text-main: #111827;
-  --color-text-main-rgb: 17, 24, 39;
-  --color-text-muted: #4B5563;
+  --color-border: rgba(6, 44, 34, 0.08);
+  --color-border-glow: rgba(16, 185, 129, 0.3);
+  --color-text-main: #0F172A;
+  --color-text-main-rgb: 15, 23, 42;
+  --color-text-muted: #475569;
 }
 
 /* 2. BASE RESET & BODY */
@@ -144,10 +148,10 @@ button {
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  background: rgba(var(--color-primary-rgb), 0.12);
-  border: 1px solid rgba(var(--color-primary-rgb), 0.25);
-  color: var(--color-text-main);
-  font-weight: 600;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: var(--color-primary);
+  font-weight: 700;
   font-size: 0.85rem;
   border-radius: var(--radius-full);
   text-transform: uppercase;
@@ -158,15 +162,15 @@ button {
 .badge-dot {
   width: 8px;
   height: 8px;
-  background: var(--color-secondary);
+  background: #10B981; /* Acid Green */
   border-radius: 50%;
-  box-shadow: 0 0 8px var(--color-secondary);
-  animation: pulse 2s infinite;
+  box-shadow: 0 0 8px #10B981;
 }
 
 .section-badge {
-  background: linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.15), rgba(var(--color-secondary-rgb), 0.15));
-  border: 1px solid rgba(var(--color-primary-rgb), 0.3);
+  background: rgba(6, 182, 212, 0.08); /* Tech Turquoise */
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  color: var(--color-primary);
 }
 
 .section-title {
@@ -191,17 +195,21 @@ button {
 
 /* 4. ANNOUNCEMENT BAR */
 .announcement-bar {
-  background: linear-gradient(90deg, #0F382C 0%, #1A5243 100%);
-  color: #F5E8D3;
-  border-bottom: 1px solid rgba(197, 168, 128, 0.3);
+  background: #062C22;
+  color: #FFFFFF;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.3);
   text-align: center;
   padding: 10px 16px;
   font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   position: relative;
   z-index: 101;
-  text-transform: uppercase;
+}
+
+.announcement-bar span {
+  color: #10B981; /* Acid Green Highlight */
+  font-weight: 700;
 }
 
 /* 5. HEADER & NAVIGATION */
@@ -245,22 +253,24 @@ button {
 }
 
 .logo-accent {
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary);
-  background: transparent;
-  padding: 2px 10px;
+  border: 1px solid #062C22;
+  color: #10B981; /* Acid Green accent text */
+  background: #062C22; /* Dark Green box */
+  padding: 3px 12px;
   border-radius: var(--radius-sm);
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 1.25rem;
+  font-weight: 800;
   letter-spacing: 0.05em;
+  box-shadow: 0 2px 8px rgba(6, 44, 34, 0.15);
 }
 
 .logo-text {
-  color: var(--color-text-main);
+  color: #062C22;
   font-family: var(--font-serif);
   letter-spacing: 0.04em;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .nav-desktop {
@@ -271,9 +281,9 @@ button {
 
 .nav-link {
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-text-muted);
-  transition: color var(--transition-fast), transform var(--transition-fast);
+  transition: color var(--transition-fast);
   position: relative;
   padding: 6px 0;
 }
@@ -284,14 +294,14 @@ button {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 1px;
-  background: var(--color-primary);
+  height: 2px;
+  background: #10B981; /* Acid Green underline */
   transition: width var(--transition-fast);
   border-radius: var(--radius-full);
 }
 
 .nav-link:hover, .nav-link.active {
-  color: var(--color-text-main);
+  color: #062C22;
 }
 
 .nav-link.active::after, .nav-link:hover::after {
@@ -310,11 +320,12 @@ button {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  min-height: 44px; /* Optimal Touch Target for Mobile & Tablet */
   padding: 12px 24px;
   border-radius: var(--radius-full);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.95rem;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
 .btn:hover {
@@ -326,30 +337,30 @@ button {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #0F382C 0%, #1A5243 100%);
+  background: #062C22;
   color: #FFFFFF;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  box-shadow: 0 4px 16px rgba(15, 56, 44, 0.2);
+  border: 1px solid #062C22;
+  box-shadow: 0 4px 16px rgba(6, 44, 34, 0.18);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #1A5243 0%, #0F382C 100%);
-  color: #FFFFFF;
-  box-shadow: 0 8px 24px rgba(15, 56, 44, 0.3);
+  background: #0D382A;
+  color: #10B981; /* Acid green text on hover */
+  border-color: #10B981;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.25);
 }
 
 .btn-secondary {
   background: #FFFFFF;
   border: 1px solid var(--color-border);
-  color: var(--color-text-main);
+  color: #062C22;
   box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover {
-  background: #F3F4F1;
-  border-color: var(--color-primary);
-  color: var(--color-primary);
+  background: #F4F8F6;
+  border-color: #10B981;
+  color: #062C22;
 }
 
 .btn-whatsapp {
@@ -1514,82 +1525,16 @@ button {
   width: 100%;
 }
 
-/* 15. DYNAMIC PAGE LOADER */
-.page-loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--color-bg-base);
-  z-index: 2000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity var(--transition-normal), visibility var(--transition-normal);
-}
-
-.page-loader.fade-out {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.loader-content {
-  text-align: center;
-}
-
-.spinner {
-  width: 44px;
-  height: 44px;
-  border: 1px solid rgba(var(--color-primary-rgb), 0.15);
-  border-top-color: var(--color-primary);
-  border-radius: 50%;
-  animation: spin 1s infinite cubic-bezier(0.4, 0, 0.2, 1);
-  margin: 0 auto 24px auto;
-}
-
-.loader-title {
-  font-family: var(--font-serif);
-  font-size: 1.75rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  margin-bottom: 8px;
-}
-
-.loader-subtitle {
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-/* 16. ANIMATIONS */
-@keyframes pulse {
-  0% { transform: scale(0.9); opacity: 0.5; box-shadow: 0 0 0 0 rgba(var(--color-secondary-rgb), 0.4); }
-  70% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 10px rgba(var(--color-secondary-rgb), 0); }
-  100% { transform: scale(0.9); opacity: 0.5; box-shadow: 0 0 0 0 rgba(var(--color-secondary-rgb), 0); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-@keyframes slideUpFade {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Scroll Reveal Hooks */
+/* 15. SCROLL REVEAL & ACCESSIBILITY HOOKS */
 .reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity var(--transition-slow), transform var(--transition-slow);
+  opacity: 1;
+  transform: none;
+  transition: opacity var(--transition-normal);
 }
 
 .reveal.active {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 /* 17. RESPONSIVE MEDIA QUERIES */

@@ -621,7 +621,6 @@ const staticCategories = [
 const mockProducts = [];
 
 // Document Elements
-const loaderEl = document.getElementById('page-loader');
 const mobileDrawerEl = document.getElementById('mobile-drawer');
 const drawerOverlayEl = document.getElementById('drawer-overlay');
 const productModalEl = document.getElementById('product-modal');
@@ -653,13 +652,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } catch (renderError) {
     console.error("Critical rendering error during initial draw:", renderError);
   }
-  
-  // Hide loading spinner after brief smooth delay
-  setTimeout(() => {
-    if (loaderEl) {
-      loaderEl.classList.add('fade-out');
-    }
-  }, 400);
 });
 
 /* ==========================================

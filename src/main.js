@@ -2,7 +2,7 @@
    GK_Gumus Master Application Logic Core
    ========================================== */
 
-import { db, doc, getDoc } from './firebase.js';
+
 
 // Global state variables
 let globalSettings = {};
@@ -58,7 +58,7 @@ const translations = {
     contact_phone_label: "Telefon",
     contact_email_label: "E-Posta",
     contact_follow_us: "Bizi Takip Edin",
-    footer_moto: "Doğal güzelliğin adresi. Google Sheets üzerinden Firebase altyapısı ile beslenen akıllı içerik yönetim sistemi.",
+    footer_moto: "Doğal güzelliğin adresi. Gümüş Kozmetik premium fason üretimi ve yüksek kalite anlayışı ile hizmetinizde.",
     footer_copyright: "Tüm Hakları Saklıdır.",
     footer_credit: "Bu site CTY - Chook Temiz Yalova tarafından kodlanmıştır.",
     modal_price_label: "Fiyat:",
@@ -107,7 +107,7 @@ const translations = {
     contact_phone_label: "Phone",
     contact_email_label: "E-Mail",
     contact_follow_us: "Follow Us",
-    footer_moto: "The home of natural beauty. Smart content management system powered by Firebase and synced directly with Google Sheets.",
+    footer_moto: "The home of natural beauty. Serving with Gümüş Kozmetik premium private label manufacturing and high quality.",
     footer_copyright: "All Rights Reserved.",
     footer_credit: "This site has been coded by CTY - Chook Temiz Yalova.",
     modal_price_label: "Price:",
@@ -156,7 +156,7 @@ const translations = {
     contact_phone_label: "الهاتف",
     contact_email_label: "البريد الإلكتروني",
     contact_follow_us: "تابعونا على",
-    footer_moto: "عنوان الجمال الطبيعي. نظام إدارة محتوى ذكي مدعوم بقاعدة بيانات فايربيس ويتزامن مباشرة مع جداول بيانات جوجل.",
+    footer_moto: "عنوان الجمال الطبيعي. في خدمتكم بجودة عالية وتصنيع خاص فاخر من جوموش كوزميتيك.",
     footer_copyright: "جميع الحقوق محفوظة.",
     footer_credit: "تم تصميم هذا الموقع وتطويره بواسطة CTY - Chook Temiz Yalova.",
     modal_price_label: "السعر:",
@@ -205,7 +205,7 @@ const translations = {
     contact_phone_label: "Телефон",
     contact_email_label: "Эл. почта",
     contact_follow_us: "Подписывайтесь на нас",
-    footer_moto: "Адрес естественной красоты. Умная система управления контентом, работающая на базе Firebase и синхронизируемая с Google Таблицами.",
+    footer_moto: "Адрес естественной красоты. К вашим услугам премиальное контрактное производство Gümüş Kozmetik.",
     footer_copyright: "Все права защищены.",
     footer_credit: "Этот сайт был разработан CTY - Chook Temiz Yalova.",
     modal_price_label: "Цена:",
@@ -327,9 +327,9 @@ const mockNotes = {
 const mockSettings = {
   site_title: "MONNICA SKIN CARE & CLEAN END | GK GÜMÜŞ KOZMETİK",
   site_description: "Premium Cilt Bakım Formülleri, Private Label ve İleri Seviye Kozmetik Çözümleri.",
-  primary_color: "#C5A880",
-  secondary_color: "#9C866B",
-  background_theme: "dark",
+  primary_color: "#0F382C",
+  secondary_color: "#C5A880",
+  background_theme: "light",
   hero_title: "MONNICA SKIN CARE",
   hero_subtitle: "FRESH CLEAN Every Day — Natural, Pure, Organic. İleri teknoloji ve binlerce yıllık güzellik sırları MONNICA laboratuvarlarında buluştu.",
   hero_bg_image: "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&q=80&w=1600",
@@ -629,10 +629,10 @@ const modalCloseBtn = document.getElementById('modal-close');
 const modalOverlayEl = document.getElementById('modal-overlay');
 
 /* ==========================================
-   INITIALIZATION & FIREBASE DATA FETCH
+   INITIALIZATION & STATIC DATA BINDING
    ========================================== */
 
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', () => {
   // Initialize Lucide Icons initially with placeholders
   triggerLucide();
   
@@ -641,102 +641,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   initAboutTabs();
   initModalListeners();
   
-  try {
-    // 1. Fetch settings
-    const settingsDoc = await getDoc(doc(db, "settings", "data"));
-    if (settingsDoc.exists()) {
-      globalSettings = settingsDoc.data();
-    } else {
-      console.log("Firestore 'settings/data' not found, using premium fallback mock data.");
-      globalSettings = mockSettings;
-    }
-    
-    // 2. Fetch notes
-    const notesDoc = await getDoc(doc(db, "notes", "data"));
-    if (notesDoc.exists()) {
-      globalNotes = notesDoc.data();
-    } else {
-      console.log("Firestore 'notes/data' not found, using premium fallback mock notes.");
-      globalNotes = mockNotes;
-    }
-
-    // 3. Fetch products (with smart fallback if database is empty or contains old pre-migration categories)
-    const productsDoc = await getDoc(doc(db, "products", "data"));
-    if (productsDoc.exists() && productsDoc.data().list && productsDoc.data().list.length > 0) {
-      const dbProducts = productsDoc.data().list;
-      // If the database list contains the old pre-migration products (like "Parfüm" or "Cilt Bakımı"),
-      // or doesn't have our newly defined production categories (like "Mutfak Temizlik"), we override with our 
-      // fully localized and premium static mockProducts array so the live site works beautifully instantly.
-      const hasNewCategories = dbProducts.some(p => 
-        p.category === "Mutfak Temizlik" || 
-        p.category_en === "Kitchen Cleaning" || 
-        p.category === "Oda & Ortam"
-      );
-      if (hasNewCategories) {
-        globalProducts = dbProducts;
-      } else {
-        console.log("Firestore list is empty or outdated (pre-migration). Forcing premium mockProducts.");
-        globalProducts = mockProducts;
-      }
-    } else {
-      console.log("Firestore 'products/data' not found, using premium fallback products list.");
-      globalProducts = mockProducts;
-    }
-  } catch (error) {
-    console.error("Firestore loading error, running in premium fallback preview mode:", error);
-    // Use fallback data to guarantee 100% operation
-    globalSettings = mockSettings;
-    globalNotes = mockNotes;
-    globalProducts = mockProducts;
-  }
-
-  // --- SAFE NORMALIZATION LAYER FOR GOOGLE SHEETS TYPE MISMATCHES ---
-  try {
-    // 1. Normalize Settings (every flat property should be cast to a string)
-    if (globalSettings && typeof globalSettings === 'object') {
-      Object.keys(globalSettings).forEach(k => {
-        if (globalSettings[k] !== undefined && globalSettings[k] !== null) {
-          globalSettings[k] = String(globalSettings[k]);
-        }
-      });
-    } else {
-      globalSettings = mockSettings;
-    }
-
-    // 2. Normalize Notes (ensure nested title & content properties are strings)
-    if (globalNotes && typeof globalNotes === 'object') {
-      Object.keys(globalNotes).forEach(k => {
-        const note = globalNotes[k];
-        if (note) {
-          if (typeof note === 'object') {
-            if (note.title !== undefined && note.title !== null) note.title = String(note.title);
-            if (note.content !== undefined && note.content !== null) note.content = String(note.content);
-          } else {
-            globalNotes[k] = { title: "", content: String(note) };
-          }
-        }
-      });
-    } else {
-      globalNotes = mockNotes;
-    }
-
-    // 3. Normalize Products (ensure all product fields are strings to avoid TypeError)
-    if (Array.isArray(globalProducts)) {
-      globalProducts.forEach(p => {
-        if (p && typeof p === 'object') {
-          ['id', 'category', 'name', 'description', 'price', 'imageUrl', 'location'].forEach(field => {
-            if (p[field] !== undefined && p[field] !== null) {
-              p[field] = String(p[field]);
-            }
-          });
-        }
-      });
-    } else {
-      globalProducts = mockProducts;
-    }
-  } catch (normError) {
-    console.error("Error during sheets data normalization, using fallback:", normError);
-  }
+  // Directly bind static datasets
+  globalSettings = mockSettings;
+  globalNotes = mockNotes;
+  globalProducts = mockProducts;
 
   // Bind and Render everything!
   try {
@@ -746,7 +654,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.error("Critical rendering error during initial draw:", renderError);
   }
   
-  // Hide loading spinner after brief smooth delay (guaranteed to execute even on rendering error)
+  // Hide loading spinner after brief smooth delay
   setTimeout(() => {
     if (loaderEl) {
       loaderEl.classList.add('fade-out');
@@ -1380,12 +1288,104 @@ function initModalListeners() {
   modalCloseBtn.addEventListener('click', closeProductModal);
   modalOverlayEl.addEventListener('click', closeProductModal);
   
+  // Image Guide Modal listeners
+  const imageGuideOpenBtn = document.getElementById('image-guide-open-btn');
+  const imageGuideModal = document.getElementById('image-guide-modal');
+  const imageGuideCloseBtn = document.getElementById('image-guide-close');
+  const imageGuideOverlay = document.getElementById('image-guide-overlay');
+  
+  if (imageGuideOpenBtn && imageGuideModal) {
+    const openGuide = () => {
+      imageGuideModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      triggerLucide();
+    };
+    const closeGuide = () => {
+      imageGuideModal.classList.remove('open');
+      document.body.style.overflow = '';
+    };
+    imageGuideOpenBtn.addEventListener('click', openGuide);
+    if (imageGuideCloseBtn) imageGuideCloseBtn.addEventListener('click', closeGuide);
+    if (imageGuideOverlay) imageGuideOverlay.addEventListener('click', closeGuide);
+  }
+
+  // Initialize interactive drag & drop image preview tool
+  initImageUploader();
+
   // Esc key closure
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && productModalEl.classList.contains('open')) {
+    if (e.key === 'Escape') {
       closeProductModal();
+      if (imageGuideModal) imageGuideModal.classList.remove('open');
+      document.body.style.overflow = '';
     }
   });
+}
+
+function initImageUploader() {
+  const dropZone = document.getElementById('drop-zone');
+  const fileInput = document.getElementById('image-file-input');
+  const previewArea = document.getElementById('image-preview-area');
+  const previewImg = document.getElementById('uploaded-preview-img');
+  const filenameEl = document.getElementById('preview-filename');
+  const copyBtn = document.getElementById('copy-image-path-btn');
+  
+  if (!dropZone || !fileInput) return;
+  
+  dropZone.addEventListener('click', () => fileInput.click());
+  
+  ['dragenter', 'dragover'].forEach(eventName => {
+    dropZone.addEventListener(eventName, (e) => {
+      e.preventDefault();
+      dropZone.classList.add('dragover');
+    }, false);
+  });
+  
+  ['dragleave', 'drop'].forEach(eventName => {
+    dropZone.addEventListener(eventName, (e) => {
+      e.preventDefault();
+      dropZone.classList.remove('dragover');
+    }, false);
+  });
+  
+  dropZone.addEventListener('drop', (e) => {
+    const files = e.dataTransfer.files;
+    if (files.length > 0) handleSelectedImage(files[0]);
+  });
+  
+  fileInput.addEventListener('change', (e) => {
+    if (e.target.files.length > 0) handleSelectedImage(e.target.files[0]);
+  });
+  
+  let currentImgData = '';
+  
+  function handleSelectedImage(file) {
+    if (!file.type.startsWith('image/')) {
+      alert('Lütfen geçerli bir görsel dosyası seçin (JPG, PNG, WEBP vb.).');
+      return;
+    }
+    
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      currentImgData = e.target.result;
+      if (previewImg) previewImg.src = currentImgData;
+      if (filenameEl) filenameEl.innerText = `${file.name} (/images/${file.name})`;
+      if (previewArea) previewArea.classList.remove('hidden');
+    };
+    reader.readAsDataURL(file);
+  }
+  
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      const fileName = filenameEl ? filenameEl.innerText.split(' ')[0] : 'urun.jpg';
+      const suggestedPath = `/images/${fileName}`;
+      navigator.clipboard.writeText(suggestedPath).then(() => {
+        const origText = copyBtn.innerText;
+        copyBtn.innerText = 'Yol Kopyalandı! ✓';
+        setTimeout(() => copyBtn.innerText = origText, 2000);
+      });
+    });
+  }
 }
 
 /* ==========================================

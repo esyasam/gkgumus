@@ -146,11 +146,6 @@
         </div>
       </div>
     </div>
-    <div class="hero-bottom-curve">
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1130.5,120,1051.13,110,985.66,92.83Z" class="curve-fill"></path>
-      </svg>
-    </div>
   </section>
 
   <!-- Quick Benefits -->
@@ -241,7 +236,6 @@
           <div class="about-image-card card-small">
             <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&q=80&w=400" alt="Kozmetik üretim" class="about-img">
           </div>
-          <div class="glowing-orb"></div>
         </div>
         <div class="about-content">
           <span class="badge section-badge" data-i18n="about_badge">Biz Kimiz?</span>
@@ -426,12 +420,18 @@
           <span class="logo-accent">GK</span>
           <span id="footer-brand-name" class="logo-text">Gümüş Kozmetik</span>
         </a>
-        <p class="footer-moto" data-i18n="footer_moto">Doğal güzelliğin adresi. Google Sheets üzerinden Firebase altyapısı ile beslenen akıllı içerik yönetim sistemi.</p>
+        <p class="footer-moto" data-i18n="footer_moto">Doğal güzelliğin adresi. Gümüş Kozmetik premium fason üretimi ve yüksek kalite anlayışı ile hizmetinizde.</p>
       </div>
       <div class="footer-divider"></div>
       <div class="footer-bottom">
         <p class="copyright">&copy; <span id="copyright-year">2026</span> <strong id="copyright-brand">Gümüş Kozmetik</strong>. <span data-i18n="footer_copyright">Tüm Hakları Saklıdır.</span></p>
-        <p class="credit" data-i18n="footer_credit">Bu site CTY - Chook Temiz Yalova tarafından kodlanmıştır.</p>
+        <div class="footer-actions-row">
+          <p class="credit" data-i18n="footer_credit">Bu site CTY - Chook Temiz Yalova tarafından kodlanmıştır.</p>
+          <button id="image-guide-open-btn" class="footer-guide-btn">
+            <i data-lucide="image" style="width: 14px; height: 14px;"></i>
+            <span>Görsel Yükleme & Yönetimi</span>
+          </button>
+        </div>
       </div>
     </div>
   </footer>
@@ -463,7 +463,55 @@
         </div>
       </div>
     </div>
-    <div id="modal-overlay" class="modal-overlay"></div>
+  <!-- Image Management Guide Modal -->
+  <div id="image-guide-modal" class="modal">
+    <div class="modal-content modal-content-wide">
+      <button id="image-guide-close" class="modal-close" aria-label="Kapat">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="modal-guide-container">
+        <div class="modal-guide-header">
+          <div class="badge"><i data-lucide="image"></i> <span>Görsel Yükleme Yapısı & Rehberi</span></div>
+          <h2>Sitede Görsel Eklemek ve Yönetmek İçin Ne Yapılmalı?</h2>
+          <p class="text-muted">Web sitenizde ürün, banner veya kurumsal fotoğrafları yönetmek için iki pratik yöntem bulunur:</p>
+        </div>
+
+        <div class="guide-cards-grid">
+          <!-- Method 1 -->
+          <div class="guide-card">
+            <div class="guide-step-num">01</div>
+            <h3>Klasöre Resim Ekleme (Önerilen Kalıcı Yöntem)</h3>
+            <p>Bilgisayarınızdaki görsel dosyalarını (JPG, PNG, WEBP) projenin <code>public/images/</code> klasörüne atın.</p>
+            <div class="code-box">
+              <code>public/images/urun-1.jpg</code>
+            </div>
+            <p>Ardından kod içerisinde resim yolunu <code>/images/urun-1.jpg</code> şeklinde belirtmeniz yeterlidir.</p>
+          </div>
+
+          <!-- Method 2 -->
+          <div class="guide-card">
+            <div class="guide-step-num">02</div>
+            <h3>Hızlı Önizleme & Yükleyici (Anlık Test)</h3>
+            <p>Aşağıdaki alana bilgisayarınızdan resim sürükleyip bırakarak anında sitede önizleyebilir ve test edebilirsiniz:</p>
+            
+            <div id="drop-zone" class="drop-zone">
+              <i data-lucide="upload-cloud" class="drop-icon"></i>
+              <p>Resim Dosyasını Buraya Sürükleyin veya <strong>Dosya Seçin</strong></p>
+              <input type="file" id="image-file-input" accept="image/*" class="file-input-hidden">
+            </div>
+
+            <div id="image-preview-area" class="image-preview-area hidden">
+              <img id="uploaded-preview-img" src="" alt="Önizleme" class="preview-img">
+              <div class="preview-info">
+                <span id="preview-filename">dosya.jpg</span>
+                <button id="copy-image-path-btn" class="btn btn-secondary btn-sm">Resim Bağlantısını Kopyala</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="image-guide-overlay" class="modal-overlay"></div>
   </div>
 
   <!-- Main Application Script Bundle -->
